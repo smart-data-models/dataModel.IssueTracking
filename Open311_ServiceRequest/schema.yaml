@@ -1,0 +1,8 @@
+Alert:
+  required:
+    - id
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: ""
