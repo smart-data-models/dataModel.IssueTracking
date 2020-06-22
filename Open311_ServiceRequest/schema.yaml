@@ -1,4 +1,4 @@
-Alert:
+IssueTracking:
   required:
     - id
   allOf:
