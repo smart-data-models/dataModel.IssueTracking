@@ -1,7 +1,7 @@
 --- 
 components: 
   schemas: 
-    BatteryStatus: 
+    Open311_ServiceType: 
       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceType/schema.ymal#/Open311_ServiceType"
 info: 
   description: ""
