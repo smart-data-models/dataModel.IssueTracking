@@ -1,4 +1,4 @@
-Open311_ServiceRequest:
+Open311_ServiceType:
   required:
     - id
     - type
@@ -7,9 +7,8 @@ Open311_ServiceRequest:
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
   type: object
   description: >-
-    An entity of type ServiceRequest is an acceptable Open 311 service request.
-    Such entity encompasses all the properties defined by Open 311 at POST
-    Service Request and GET Service Request.
+    As per Open311 an entity of type ServiceType is an acceptable 311 service
+    request type. A request type can be unique to the city/jurisdiction.
   properties:
     address:
       $ref: >-
