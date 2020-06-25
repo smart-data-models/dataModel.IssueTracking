@@ -13,7 +13,10 @@ openapi: "3.0.0"
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
-      description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
+      description: >-
+         An entity of type ServiceRequest is an acceptable Open 311 service request.
+         Such entity encompasses all the properties defined by Open 311 at POST
+         Service Request and GET Service Request.
       parameters: 
         - 
           in: query
