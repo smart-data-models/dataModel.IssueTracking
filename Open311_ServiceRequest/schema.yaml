@@ -1,4 +1,4 @@
-IssueTracking:
+Open311_ServiceRequest:
   required:
     - id
   allOf:
