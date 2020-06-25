@@ -1,11 +1,11 @@
 --- 
 components: 
   schemas: 
-    Open311_ServiceType: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceRequest/schema.yaml#/Open311_ServiceType"
+    Open311_ServiceRequest: 
+      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceRequest/schema.yaml#/Open311_ServiceRequest"
 info: 
   description: ""
-  title: IssueTracking
+  title: Open311_ServiceRequest
   version: "1.0.0"
 openapi: "3.0.0"
 
@@ -21,7 +21,7 @@ paths:
           required: true
           schema: 
             enum: 
-              - IssueTracking
+              - Open311_ServiceRequest
             type: string
       responses: 
         ? "200"
