@@ -15,23 +15,14 @@ Open311_ServiceRequest:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
     alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
     areaServed:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
@@ -42,22 +33,8 @@ Open311_ServiceRequest:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items:
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source

@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Open311_ServiceType: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceType/schema.ymal#/Open311_ServiceType"
+      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceType/schema.yaml#/Open311_ServiceType"
 info: 
   description: ""
   title: Open311_ServiceType
