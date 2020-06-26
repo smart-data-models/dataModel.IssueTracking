@@ -4,7 +4,10 @@ components:
     Open311_ServiceRequest: 
       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceRequest/schema.yaml#/Open311_ServiceRequest"
 info: 
-  description: ""
+  description: >-
+    An entity of type ServiceRequest is an acceptable Open 311 service request.
+    Such entity encompasses all the properties defined by Open 311 at POST
+    Service Request and GET Service Request.
   title: Open311_ServiceRequest
   version: "1.0.0"
 openapi: "3.0.0"
