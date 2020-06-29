@@ -35,12 +35,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/examples/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
