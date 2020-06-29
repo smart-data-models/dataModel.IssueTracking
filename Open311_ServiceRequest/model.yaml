@@ -1,0 +1,40 @@
+Open311_ServiceRequest:
+  required:
+    - id
+    - type
+  allOf:
+    - $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    An entity of type ServiceRequest is an acceptable Open 311 service request.
+    Such entity encompasses all the properties defined by Open 311 at POST
+    Service Request and GET Service Request.
+  properties:
+    address:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
+    alternateName:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+    areaServed:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
+    dataProvider:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
+    description:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    location:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
+    name:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+    owner:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source

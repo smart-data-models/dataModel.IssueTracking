@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Open311_ServiceRequest: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceRequest/schema.yaml#/Open311_ServiceRequest"
+      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceRequest/model.yaml#/Open311_ServiceRequest"
 info: 
   description: >-
     An entity of type ServiceRequest is an acceptable Open 311 service request.
@@ -36,12 +36,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceRequest/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceRequest/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceRequest/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceRequest/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

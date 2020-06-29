@@ -18,8 +18,8 @@ FIWARE / Schema.org data model and Open 311.
 The FIWARE NGSI civic issue tracking data model defines the following entity
 types:
 
--   [`Open311:ServiceType`](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceType/swagger.yaml). A type of service
+-   [`Open311:ServiceType`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/swagger.yaml). A type of service
     a citizen can request. It encompasses data from the Open 311 GET Service
     List and GET Service Definition.
--   [`Open311:ServiceRequest`](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceRequest/swagger.yaml). A specific
+-   [`Open311:ServiceRequest`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceRequest/swagger.yaml). A specific
     service request (of a service type) made by a citizen.
