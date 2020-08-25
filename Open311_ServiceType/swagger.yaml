@@ -7,7 +7,7 @@ components:
     Open311_ServiceType: 
       $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/model.yaml#/Open311_ServiceType"
 info: 
-  description: >-
+  description: |
     As per Open311 an entity of type ServiceType is an acceptable 311 service
     request type. A request type can be unique to the city/jurisdiction.
   title: Open311_ServiceType
