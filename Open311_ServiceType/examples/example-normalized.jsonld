@@ -1,0 +1,61 @@
+{
+    "id": "urn:ngsi-ld:Open311ServiceType:o311:servicetype-guadalajara-sidewalks",
+    "type": "Open311ServiceType",
+    "createdAt": "2007-01-01T12:00:00Z",
+    "group": {
+        "type": "Property",
+        "value": "street"
+    },
+    "description": {
+        "type": "Property",
+        "value": "When a sidewalk is broken or dirty allows citizens to request a fix"
+    },
+    "service_code": {
+        "type": "Property",
+        "value": 234
+    },
+    "service_name": {
+        "type": "Property",
+        "value": "Aceras"
+    },
+    "open311:type": {
+        "type": "Property",
+        "value": "realtime"
+    },
+    "jurisdiction_id": {
+        "type": "Property",
+        "value": "www.smartguadalajara.com"
+    },
+    "keywords": {
+        "type": "Property",
+        "value": "street,sidewalk, cleaning, repair"
+    },
+    "attributes": {
+        "type": "Property",
+        "value": [
+            {
+                "code": "ISSUE_TYPE",
+                "description": "What is the identified problem at the sidewalk?",
+                "datatype": "singlevaluelist",
+                "required": true,
+                "values": [
+                    {
+                        "name": "Bump",
+                        "key": 123
+                    },
+                    {
+                        "name": "Dirty",
+                        "key": 124
+                    }
+                ],
+                "variable": true,
+                "order": 1,
+                "datatype_description": ""
+            }
+        ]
+    },
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
+}
