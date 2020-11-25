@@ -5,7 +5,7 @@ Entity: Open311_ServiceType
 
 ## List of properties  
 
-`address`: The mailing address.  `alternateName`: An alternative name for this item  `areaServed`: The geographic area where a service or offered item is provided.  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  `description`: A description of this item  `id`:   `location`:   `name`: The name of this item.  `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  `seeAlso`:   `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  `type`: NGSI Entity type  ## Data Model description of properties  
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type  ## Data Model description of properties  
 Sorted alphabetically  
 ```yaml  
 Open311_ServiceType:    
@@ -236,6 +236,7 @@ Open311_ServiceType:
     - type    
   type: object    
 ```  
+#### Open311_ServiceType NGSI V2 key-values Example    
 Here is an example of a Open311_ServiceType in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -272,6 +273,7 @@ Open311_ServiceType:
   ]  
 }  
 ```  
+#### Open311_ServiceType NGSI V2 normalized Example    
 Here is an example of a Open311_ServiceType in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -327,6 +329,7 @@ Open311_ServiceType:
   }  
 }  
 ```  
+#### Open311_ServiceType NGSI-LD key-values Example    
 Here is an example of a Open311_ServiceType in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -353,6 +356,7 @@ Open311_ServiceType:
  "service_name": "Aceras",  
  "type": "Open311ServiceType"}  
 ```  
+#### Open311_ServiceType NGSI-LD normalized Example    
 Here is an example of a Open311_ServiceType in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
