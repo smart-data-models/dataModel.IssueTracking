@@ -81,13 +81,13 @@
           "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/email"
         },
         "first_name": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/givenName"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/person/givenName"
         },
         "last_name": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/familyName"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/person/familyName"
         },
         "phone": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/telephone"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/person/telephone"
         },
         "device_id": {
           "anyOf": [
