@@ -16,11 +16,118 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["Open311ServiceRequest"],
-          "description": "NGSI Entity type"
+          "enum": [
+            "Open311ServiceRequest"
+          ],
+          "description": "Property. NGSI Entity type. It has to be Open311ServiceRequest"
+        },
+        "service_request_id": {
+          "type": "string",
+          "description": "Property. The unique ID of the service request created."
+        },
+        "jurisdiction_id": {
+          "type": "string",
+          "description": "Property. The unique ID of the legal entity of the service (i.e. city)."
+        },
+        "service_code": {
+          "type": "string",
+          "description": "Property. The unique identifier for the service request type."
+        },
+        "service_name": {
+          "type": "string",
+          "description": "Property. The human readable name of the service request type."
+        },
+        "agency_responsible": {
+          "type": "string",
+          "description": "Property. Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org. Model:'http://schema.org/provider'"
+        },
+        "service_notice": {
+          "type": "string",
+          "description": "Property. Information about the action expected to fulfill the request or otherwise address the information reported."
+        },
+        "status": {
+          "type": "string",
+          "description": "Property. Allows one to search for requests which have a specific status. This defaults to all statuses; can be declared multiple times, comma delimited. Enum:'open, closed'",
+          "enum": [
+            "closed",
+            "open"
+          ]
+        },
+        "status_notes": {
+          "type": "string",
+          "description": "Property. Explanation of why status was changed to current state or more details on current status than conveyed with status alone."
+        },
+        "requested_datetime": {
+          "type": "string",
+          "description": "Property. The date and time when the service request was made. Model:'https://schema.org/DateTime'"
+        },
+        "updated_datetime": {
+          "type": "string",
+          "description": "Property. The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed. Model:'https://schema.org/DateTime'"
+        },
+        "expected_datetime": {
+          "type": "string",
+          "description": "Property. The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement. Model:'https://schema.org/DateTime'"
+        },
+        "media_url": {
+          "type": "string",
+          "description": "Property. A URL to media associated with the request, eg an image. Model:'https://schema.org/URL'"
+        },
+        "requested_datetime": {
+          "type": "string",
+          "description": "Property. The date and time when the service request was made. Model:'https://schema.org/DateTime'"
+        },
+        "email": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/email"
+        },
+        "first_name": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/givenName"
+        },
+        "last_name": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/familyName"
+        },
+        "phone": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/telephone"
+        },
+        "device_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. The unique device ID of the device submitting the request. This is usually only used for mobile devices. Model:'https://schema.org/URL'"
         }
+      },
+      "account_id": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
+            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+            "description": "Property. Identifier format of any NGSI entity"
+          },
+          {
+            "type": "string",
+            "format": "uri",
+            "description": "Property. Identifier format of any NGSI entity"
+          }
+        ],
+        "description": "Relationship. The unique ID for the user account of the person submitting the request. Model:'https://schema.org/URL'"
       }
     }
   ],
-  "required": ["id", "type"]
+  "required": [
+    "id",
+    "type"
+  ]
 }
