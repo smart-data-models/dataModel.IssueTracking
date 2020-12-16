@@ -1,5 +1,5 @@
 notesHeader:
-
+  As per [Open311](http://wiki.open311.org/GeoReport_v2/#get-service-list) an entity of type `ServiceType` is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction. Please note that this data model has not been harmonized  style. We have decided to keep the same property names and structure, although we strongly believe the Open311 model can be leveraged.
 notesMiddle:
 
 notesFooter:
