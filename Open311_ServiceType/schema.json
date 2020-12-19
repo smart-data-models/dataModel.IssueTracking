@@ -58,7 +58,23 @@
           "type": "array",
           "description": "Property. As per the [Service Definition](http://wiki.open311.org/GeoReport_v2/#get-service-definition) structure defined by Open 311.",
           "items": {
-            "type": "string"
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "number"
+              }
+            ]
           }
         },
         "provider": {
@@ -78,3 +94,4 @@
     "type"
   ]
 }
+

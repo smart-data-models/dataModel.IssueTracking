@@ -4,7 +4,7 @@
   "dateCreated": "2007-01-01T12:00:00Z",
   "jurisdiction_id": "www.smartguadalajara.com",
   "open311:type": "realtime",
-  "service_code": 234,
+  "service_code": "234",
   "service_name": "Aceras",
   "description": "When a sidewalk is broken or dirty allows citizens to request a fix",
   "keywords": "street,sidewalk, cleaning, repair",

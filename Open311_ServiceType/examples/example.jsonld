@@ -18,6 +18,6 @@
  "jurisdiction_id": "www.smartguadalajara.com",
  "keywords": "street,sidewalk, cleaning, repair",
  "open311:type": "realtime",
- "service_code": 234,
+ "service_code": "234",
  "service_name": "Aceras",
  "type": "Open311ServiceType"}

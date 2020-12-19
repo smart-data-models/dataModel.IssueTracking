@@ -12,7 +12,7 @@
     },
     "service_code": {
         "type": "Property",
-        "value": 234
+        "value": "234"
     },
     "service_name": {
         "type": "Property",
