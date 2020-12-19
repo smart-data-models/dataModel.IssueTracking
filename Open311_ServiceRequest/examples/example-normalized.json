@@ -8,7 +8,7 @@
     "value": "Acera en mal estado con bordillo partido en dos"
   },
   "service_code": {
-    "value": 234
+    "value": "234"
   },
   "status_notes": {
     "value": "Duplicate request."
@@ -17,7 +17,7 @@
     "value": "Aceras"
   },
   "service_request_id": {
-    "value": 638344
+    "value": "638344"
   },
   "updated_datetime": {
     "type": "DateTime",

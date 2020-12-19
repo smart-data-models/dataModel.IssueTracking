@@ -11,7 +11,7 @@
     },
     "service_code": {
         "type": "Property",
-        "value": 234
+        "value": "234"
     },
     "status_notes": {
         "type": "Property",
@@ -23,7 +23,7 @@
     },
     "service_request_id": {
         "type": "Property",
-        "value": 638344
+        "value": "638344"
     },
     "updated_datetime": {
         "type": "Property",
