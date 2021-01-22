@@ -2,9 +2,7 @@
 
 ## Description 
 
-As per Open311 an entity of type ServiceType is an acceptable 311 service
-request type. A request type can be unique to the city/jurisdiction.
-
+As per Open311 an entity of type ServiceType is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/swagger.yaml)
