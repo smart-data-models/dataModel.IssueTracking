@@ -2,10 +2,7 @@
 
 ## Description 
 
-An entity of type ServiceRequest is an acceptable Open 311 service request.
-Such entity encompasses all the properties defined by Open 311 at POST
-Service Request and GET Service Request.
-
+An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceRequest/swagger.yaml)
