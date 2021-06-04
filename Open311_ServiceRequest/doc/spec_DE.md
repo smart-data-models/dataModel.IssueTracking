@@ -1,11 +1,12 @@
 Entität: Open311_ServiceRequest  
 ===============================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.IssueTracking/blob/master/Open311_ServiceRequest/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Eine Entität vom Typ ServiceRequest ist eine akzeptable Open 311-Serviceanfrage. Eine solche Entität umfasst alle von Open 311 bei POST Service Request und GET Service Request definierten Eigenschaften.**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift.  - `agency_responsible`: Bitte beachten Sie, dass dies semantisch äquivalent zur Provider-Eigenschaft (Untereigenschaft name) von schema.org ist  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `device_id`: Die eindeutige Geräte-ID des Geräts, das die Anfrage übermittelt. Dies wird normalerweise nur für mobile Geräte verwendet  - `email`: E-Mail Adresse des Eigentümers.  - `expected_datetime`: Das Datum und die Uhrzeit, zu der die Erfüllung der Service-Anforderung erwartet werden kann. Dies kann auf einer dienstspezifischen Service-Level-Vereinbarung beruhen  - `first_name`: Vornamen. In den USA der Vorname einer Person.  - `id`: Eindeutiger Bezeichner der Entität  - `jurisdiction_id`: Die eindeutige ID der juristischen Person des Dienstes (d. h. der Stadt).  - `last_name`: Familienname. In den USA der Nachname einer Person.  - `location`:   - `media_url`: Eine URL zu Medien, die mit der Anfrage verbunden sind, z. B. ein Bild  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `phone`: Vornamen. Die Rufnummer.  - `requested_datetime`: Das Datum und die Uhrzeit, zu der die Serviceanfrage gestellt wurde  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `service_code`: Der eindeutige Bezeichner für den Dienstanforderungstyp.  - `service_name`: Der menschenlesbare Name des Dienstanforderungstyps.  - `service_notice`: Informationen über die erwartete Aktion zur Erfüllung der Anfrage oder zur anderweitigen Behebung der gemeldeten Informationen.  - `service_request_id`: Die eindeutige ID der erstellten Dienstanforderung.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Ermöglicht die Suche nach Anfragen, die einen bestimmten Status haben. Standardmäßig sind dies alle Status; kann mehrfach deklariert werden, kommagetrennt. Enum:'offen, geschlossen'  - `status_notes`: Erklärung, warum der Status in den aktuellen Zustand geändert wurde oder mehr Details zum aktuellen Status, als mit dem Status allein vermittelt werden.  - `type`: NGSI Entity-Typ. Es muss Open311ServiceRequest sein  - `updated_datetime`: Das Datum und die Uhrzeit, zu der die Serviceanfrage zuletzt geändert wurde. Bei Anfragen mit status=closed ist dies das Datum, an dem die Anfrage geschlossen wurde    
+- `address`: Die Postanschrift  - `agency_responsible`: Bitte beachten Sie, dass dies semantisch äquivalent zur Provider-Eigenschaft (Untereigenschaft name) von schema.org ist  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `device_id`: Die eindeutige Geräte-ID des Geräts, das die Anfrage übermittelt. Dies wird normalerweise nur für mobile Geräte verwendet  - `email`: E-Mail Adresse des Eigentümers.  - `expected_datetime`: Das Datum und die Uhrzeit, zu der die Erfüllung der Service-Anforderung erwartet werden kann. Dies kann auf einer dienstspezifischen Service-Level-Vereinbarung beruhen  - `first_name`: Vornamen. In den USA der Vorname einer Person.  - `id`: Eindeutiger Bezeichner der Entität  - `jurisdiction_id`: Die eindeutige ID der juristischen Person des Dienstes (d. h. der Stadt).  - `last_name`: Familienname. In den USA der Nachname einer Person.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `media_url`: Eine URL zu Medien, die mit der Anfrage verbunden sind, z. B. ein Bild  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `phone`: Die Rufnummer.  - `requested_datetime`: Das Datum und die Uhrzeit, zu der die Serviceanfrage gestellt wurde  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `service_code`: Der eindeutige Bezeichner für den Dienstanforderungstyp.  - `service_name`: Der menschenlesbare Name des Dienstanforderungstyps.  - `service_notice`: Informationen über die erwartete Aktion zur Erfüllung der Anfrage oder zur anderweitigen Behebung der gemeldeten Informationen.  - `service_request_id`: Die eindeutige ID der erstellten Dienstanforderung.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Ermöglicht die Suche nach Anfragen, die einen bestimmten Status haben. Standardmäßig sind dies alle Status; kann mehrfach deklariert werden, kommagetrennt. Enum:'offen, geschlossen'  - `status_notes`: Erklärung, warum der Status in den aktuellen Zustand geändert wurde oder mehr Details zum aktuellen Status, als mit dem Status allein vermittelt werden.  - `type`: NGSI Entity-Typ. Es muss Open311ServiceRequest sein  - `updated_datetime`: Das Datum und die Uhrzeit, zu der die Serviceanfrage zuletzt geändert wurde. Bei Anfragen mit status=closed ist dies das Datum, an dem die Anfrage geschlossen wurde    
 Erforderliche Eigenschaften  
 - `id`  - `type`    
 Eine Entität vom Typ `ServiceRequest` ist eine akzeptable Open 311-Service-Anfrage. Eine solche Entität umfasst alle von Open 311 unter [POST Service Request] (http://wiki.open311.org/GeoReport_v2/#post-service-request) und [GET Service Request] (http://wiki.open311.org/GeoReport_v2/#get-service-request) definierten Eigenschaften. Unter Verwendung dieses Datenmodells und einer FIWARE NGSI Version 2 Implementierung ist es einfach, einen Service zu implementieren, der den Open 311 Spezifikationen entspricht.  
@@ -17,30 +18,29 @@ Open311_ServiceRequest:
   description: 'An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     agency_responsible:    
       description: 'Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org'    
       type: Property    
@@ -117,10 +117,10 @@ Open311_ServiceRequest:
       x-ngsi:    
         model: https://schema.org/Text    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -140,7 +140,8 @@ Open311_ServiceRequest:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -163,7 +164,8 @@ Open311_ServiceRequest:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -188,7 +190,8 @@ Open311_ServiceRequest:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -210,7 +213,8 @@ Open311_ServiceRequest:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -235,7 +239,8 @@ Open311_ServiceRequest:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -262,7 +267,7 @@ Open311_ServiceRequest:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     media_url:    
       description: 'A URL to media associated with the request, eg an image'    
       type: Property    
@@ -278,7 +283,7 @@ Open311_ServiceRequest:
         description: 'Property. Unique identifier of the entity'    
       type: Property    
     phone:    
-      description: 'Given name. The telephone number.'    
+      description: 'The telephone number.'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -291,8 +296,8 @@ Open311_ServiceRequest:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
