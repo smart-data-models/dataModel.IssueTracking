@@ -1,11 +1,12 @@
 Entität: Open311_ServiceType  
 ============================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.IssueTracking/blob/master/Open311_ServiceType/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Gemäß Open311 ist eine Entität vom Typ ServiceType ein akzeptabler 311-Service-Anfrage-Typ. Ein Anfragetyp kann für die Stadt/Gerichtsbarkeit eindeutig sein.**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift.  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `attributes`: Gemäß der von Open 311 definierten [Service Definition](http://wiki.open311.org/GeoReport_v2/#get-service-definition) Struktur.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `effectiveSince`: Das Datum, an dem der Diensttyp erstellt wurde. Dieses Datum kann sich vom Erstellungsdatum der Entität unterscheiden  - `group`: Eine Kategorie, in der dieser Diensttyp gruppiert wird. Dies bietet eine Möglichkeit, mehrere Serviceanforderungstypen unter einer Kategorie zu gruppieren, wie z. B. Sanitär  - `id`: Eindeutiger Bezeichner der Entität  - `jurisdiction_id`: Die eindeutige ID der juristischen Person des Dienstes (d. h. der Stadt).  - `keywords`: Eine durch Kommata getrennte Liste von Tags oder Schlüsselwörtern, die Benutzern helfen, den Anfragetyp zu identifizieren. Dies kann Synonyme des service_name und der Gruppe liefern.  - `location`:   - `name`: Der Name dieses Elements.  - `open311:metadata`: Dieses Feld ist nicht unbedingt erforderlich, da die vorgeschlagene Entität auch die Attributdefinition umfasst. Wenn es definiert ist, muss sein Wert `true` sein, wenn die Eigenschaft `attributes` definiert ist und sein Array-Wert nicht leer ist. Andernfalls muss es gleich `false` sein.  - `open311:type`: realtime: Die ID der Dienstanforderung wird sofort nach dem Senden der Dienstanforderung zurückgegeben. batch: Ein Token wird sofort nach dem Absenden der Dienstanforderung zurückgegeben. Dieses Token kann dann später verwendet werden, um die Dienstanforderungs-ID zurückzugeben. blackbox: Es wird keine Service Request ID zurückgegeben, nachdem die Service Request übermittelt wurde. Enum:'realtime, batch, blackbox'.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `provider`: Anbieter des Dienstes  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `service_code`: Der eindeutige Bezeichner für den Dienstanforderungstyp.  - `service_name`: Der menschenlesbare Name des Dienstanforderungstyps.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI Entity-Typ. Es muss Open311ServiceType sein    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `attributes`: Gemäß der von Open 311 definierten [Service Definition](http://wiki.open311.org/GeoReport_v2/#get-service-definition) Struktur.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `effectiveSince`: Das Datum, an dem der Diensttyp erstellt wurde. Dieses Datum kann sich vom Erstellungsdatum der Entität unterscheiden  - `group`: Eine Kategorie, in der dieser Diensttyp gruppiert wird. Dies bietet eine Möglichkeit, mehrere Serviceanforderungstypen unter einer Kategorie zu gruppieren, wie z. B. Sanitär  - `id`: Eindeutiger Bezeichner der Entität  - `jurisdiction_id`: Die eindeutige ID der juristischen Person des Dienstes (d. h. der Stadt).  - `keywords`: Eine durch Kommata getrennte Liste von Tags oder Schlüsselwörtern, die Benutzern helfen, den Anfragetyp zu identifizieren. Dies kann Synonyme des service_name und der Gruppe liefern.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `open311:metadata`: Dieses Feld ist nicht unbedingt erforderlich, da die vorgeschlagene Entität auch die Attributdefinition umfasst. Wenn es definiert ist, muss sein Wert `true` sein, wenn die Eigenschaft `attributes` definiert ist und sein Array-Wert nicht leer ist. Andernfalls muss es gleich `false` sein.  - `open311:type`: realtime: Die ID der Dienstanforderung wird sofort nach dem Senden der Dienstanforderung zurückgegeben. batch: Ein Token wird sofort nach dem Absenden der Dienstanforderung zurückgegeben. Dieses Token kann dann später verwendet werden, um die Dienstanforderungs-ID zurückzugeben. blackbox: Es wird keine Service Request ID zurückgegeben, nachdem die Service Request übermittelt wurde. Enum:'realtime, batch, blackbox'.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `provider`: Anbieter des Dienstes  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `service_code`: Der eindeutige Bezeichner für den Dienstanforderungstyp.  - `service_name`: Der menschenlesbare Name des Dienstanforderungstyps.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI Entity-Typ. Es muss Open311ServiceType sein    
 Erforderliche Eigenschaften  
 - `id`  - `type`    
 Gemäß [Open311] (http://wiki.open311.org/GeoReport_v2/#get-service-list) ist eine Entität des Typs `ServiceType` ein akzeptabler 311-Dienstanforderungstyp. Ein Anfragetyp kann für die Stadt/Gerichtsbarkeit eindeutig sein. Bitte beachten Sie, dass dieses Datenmodell nicht stilistisch harmonisiert wurde. Wir haben uns entschieden, die gleichen Eigenschaftsnamen und die gleiche Struktur beizubehalten, obwohl wir fest davon überzeugt sind, dass das Open311-Modell genutzt werden kann.  
@@ -17,30 +18,29 @@ Open311_ServiceType:
   description: 'As per Open311 an entity of type ServiceType is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -101,10 +101,10 @@ Open311_ServiceType:
       description: 'A comma separated list of tags or keywords to help users identify the request type. This can provide synonyms of the service_name and group.'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -124,7 +124,8 @@ Open311_ServiceType:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -147,7 +148,8 @@ Open311_ServiceType:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -172,7 +174,8 @@ Open311_ServiceType:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -194,7 +197,8 @@ Open311_ServiceType:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -219,7 +223,8 @@ Open311_ServiceType:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -246,7 +251,7 @@ Open311_ServiceType:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -275,8 +280,8 @@ Open311_ServiceType:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
