@@ -372,3 +372,4 @@ Open311_ServiceRequest:
     - id
     - type
   type: object
+  version: 0.1.0
