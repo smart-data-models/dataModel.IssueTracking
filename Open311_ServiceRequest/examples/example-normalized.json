@@ -2,21 +2,27 @@
   "id": "service-request:638344",
   "type": "Open311ServiceRequest",
   "status": {
+    "type": "Text",
     "value": "closed"
   },
   "description": {
+    "type": "Text",
     "value": "Acera en mal estado con bordillo partido en dos"
   },
   "service_code": {
+    "type": "Text",
     "value": "234"
   },
   "status_notes": {
+    "type": "Text",
     "value": "Duplicate request."
   },
   "service_name": {
+    "type": "Text",
     "value": "Aceras"
   },
   "service_request_id": {
+    "type": "Text",
     "value": "638344"
   },
   "updated_datetime": {
@@ -24,6 +30,7 @@
     "value": "2010-04-14T06:37:38-08:00"
   },
   "address_string": {
+    "type": "Text",
     "value": "Calle San Juan Bautista, 2"
   },
   "requested_datetime": {
@@ -34,22 +41,36 @@
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-3.164485591715449, 40.62785133667262]
+      "coordinates": [
+        -3.164485591715449,
+        40.62785133667262
+      ]
     }
   },
   "attributes": {
-    "value": {
-      "ISSUE_TYPE": ["Bordillo"]
-    }
+    "type": "Text",
+    "value": [
+      {
+        "code": "ISSUE_TYPE",
+        "values": [
+          {
+            "key": 1,
+            "name": "Bordillo"
+          }
+        ]
+      }
+    ]
   },
   "expected_datetime": {
     "type": "DateTime",
     "value": "2010-04-15T06:37:38-08:00"
   },
   "agency_responsible": {
+    "type": "Text",
     "value": "Ayuntamiento de Ciudad"
   },
   "media_url": {
+    "type": "Text",
     "value": "http://exaple.org/media/638344.jpg"
   }
 }
