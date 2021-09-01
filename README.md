@@ -5,6 +5,8 @@ In the medium term, might propose to the Open311 Community a harmonized data mod
 ### List of data models
 
 The following entity types are available:
+- [IssueReporting](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/IssueReporting/README.md). A Data Model for citizen issues, reports and feedbacks.
+
 - [Open311_ServiceRequest](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceRequest/README.md). An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.
 
 - [Open311_ServiceType](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceType/README.md). As per Open311 an entity of type ServiceType is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.
