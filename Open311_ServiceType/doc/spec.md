@@ -38,17 +38,21 @@ Open311_ServiceType:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     attributes:    
       description: "As per the [Service Definition](http://wiki.open311.org/GeoReport_v2/#get-service-definition) structure defined by Open 311."    
       items:    
@@ -58,30 +62,43 @@ Open311_ServiceType:
           - type: array    
           - type: boolean    
           - type: number    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     effectiveSince:    
       description: 'The date on which the service type was created. This date might be different than the entity creation date'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/DateTime    
+        type: Property    
     group:    
       description: 'A category to group this service type within. This provides a way to group several service request types under one category such as sanitation'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &open311_servicetype_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -93,13 +110,18 @@ Open311_ServiceType:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     jurisdiction_id:    
       description: 'The unique ID of the legal entity of the service (i.e. city).'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     keywords:    
       description: 'A comma separated list of tags or keywords to help users identify the request type. This can provide synonyms of the service_name and group.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -251,31 +273,41 @@ Open311_ServiceType:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     open311:metadata:    
       description: 'This field is not strictly needed as the proposed entity encompasses the attribute definition as well. If defined, its value must be `true` if the `attributes` property is defined and its array value is not empty. Otherwise it must be equal to `false`'    
-      type: Property    
+      type: boolean    
+      x-ngsi:    
+        type: Property    
     open311:type:    
       description: 'realtime: The service request ID will be returned immediately after the service request is submitted. batch: A token will be returned immediately after the service request is submitted. This token can then be later used to return the service request ID. blackbox: No service request ID will be returned after the service request is submitted. Enum:''realtime, batch, blackbox''. '    
       enum:    
         - batch    
         - blackbox    
         - realtime    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *open311_servicetype_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     provider:    
       description: 'Provider of the service'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/provider    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -286,21 +318,30 @@ Open311_ServiceType:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     service_code:    
       description: 'The unique identifier for the service request type.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     service_name:    
       description: 'The human readable name of the service request type.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be Open311ServiceType'    
       enum:    
         - Open311ServiceType    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -352,21 +393,27 @@ Open311_ServiceType:
   "id": "o311:servicetype-guadalajara-sidewalks",  
   "type": "Open311ServiceType",  
   "group": {  
+    "type": "Text",  
     "value": "street"  
   },  
   "description": {  
+    "type": "Text",  
     "value": "When a sidewalk is broken or dirty allows citizens to request a fix"  
   },  
   "service_code": {  
+    "type": "Text",  
     "value": "234"  
   },  
   "service_name": {  
+    "type": "Text",  
     "value": "Aceras"  
   },  
   "open311:type": {  
+    "type": "Text",  
     "value": "realtime"  
   },  
   "jurisdiction_id": {  
+    "type": "URL",  
     "value": "www.smartguadalajara.com"  
   },  
   "dateCreated": {  
@@ -374,9 +421,11 @@ Open311_ServiceType:
     "value": "2007-01-01T12:00:00Z"  
   },  
   "keywords": {  
+    "type": "Text",  
     "value": "street,sidewalk, cleaning, repair"  
   },  
   "attributes": {  
+    "type": "StructuredValue",  
     "value": [  
       {  
         "code": "ISSUE_TYPE",  
@@ -403,6 +452,47 @@ Open311_ServiceType:
 ```  
 #### Open311_ServiceType NGSI-LD key-values Example    
 Here is an example of a Open311_ServiceType in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "attributes": [  
+    {  
+      "code": "ISSUE_TYPE",  
+      "datatype": "singlevaluelist",  
+      "datatype_description": "",  
+      "description": "What is the identified problem at the sidewalk?",  
+      "order": 1,  
+      "required": true,  
+      "values": [  
+        {  
+          "key": 123,  
+          "name": "Bump"  
+        },  
+        {  
+          "key": 124,  
+          "name": "Dirty"  
+        }  
+      ],  
+      "variable": true  
+    }  
+  ],  
+  "createdAt": "2007-01-01T12:00:00Z",  
+  "description": "When a sidewalk is broken or dirty allows citizens to request a fix",  
+  "group": "street",  
+  "id": "urn:ngsi-ld:Open311ServiceType:o311:servicetype-guadalajara-sidewalks",  
+  "jurisdiction_id": "www.smartguadalajara.com",  
+  "keywords": "street,sidewalk, cleaning, repair",  
+  "open311:type": "realtime",  
+  "service_code": "234",  
+  "service_name": "Aceras",  
+  "type": "Open311ServiceType"  
+}  
+```  
+#### Open311_ServiceType NGSI-LD normalized Example    
+Here is an example of a Open311_ServiceType in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Open311ServiceType:o311:servicetype-guadalajara-sidewalks",  
@@ -464,46 +554,5 @@ Open311_ServiceType:
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
-}  
-```  
-#### Open311_ServiceType NGSI-LD normalized Example    
-Here is an example of a Open311_ServiceType in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "attributes": [  
-    {  
-      "code": "ISSUE_TYPE",  
-      "datatype": "singlevaluelist",  
-      "datatype_description": "",  
-      "description": "What is the identified problem at the sidewalk?",  
-      "order": 1,  
-      "required": true,  
-      "values": [  
-        {  
-          "key": 123,  
-          "name": "Bump"  
-        },  
-        {  
-          "key": 124,  
-          "name": "Dirty"  
-        }  
-      ],  
-      "variable": true  
-    }  
-  ],  
-  "createdAt": "2007-01-01T12:00:00Z",  
-  "description": "When a sidewalk is broken or dirty allows citizens to request a fix",  
-  "group": "street",  
-  "id": "urn:ngsi-ld:Open311ServiceType:o311:servicetype-guadalajara-sidewalks",  
-  "jurisdiction_id": "www.smartguadalajara.com",  
-  "keywords": "street,sidewalk, cleaning, repair",  
-  "open311:type": "realtime",  
-  "service_code": "234",  
-  "service_name": "Aceras",  
-  "type": "Open311ServiceType"  
 }  
 ```  
