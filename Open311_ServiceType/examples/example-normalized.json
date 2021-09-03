@@ -2,21 +2,27 @@
   "id": "o311:servicetype-guadalajara-sidewalks",
   "type": "Open311ServiceType",
   "group": {
+    "type": "Text",
     "value": "street"
   },
   "description": {
+    "type": "Text",
     "value": "When a sidewalk is broken or dirty allows citizens to request a fix"
   },
   "service_code": {
+    "type": "Text",
     "value": "234"
   },
   "service_name": {
+    "type": "Text",
     "value": "Aceras"
   },
   "open311:type": {
+    "type": "Text",
     "value": "realtime"
   },
   "jurisdiction_id": {
+    "type": "URL",
     "value": "www.smartguadalajara.com"
   },
   "dateCreated": {
@@ -24,9 +30,11 @@
     "value": "2007-01-01T12:00:00Z"
   },
   "keywords": {
+    "type": "Text",
     "value": "street,sidewalk, cleaning, repair"
   },
   "attributes": {
+    "type": "StructuredValue",
     "value": [
       {
         "code": "ISSUE_TYPE",
