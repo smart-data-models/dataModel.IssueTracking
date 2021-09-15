@@ -3,5 +3,6 @@
     "$schemaVersion": "0.1.0",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceRequest/schema.json",
-    "title": "FIWARE - Open311 Service Request"
+    "title": "FIWARE - Open311 Service Request",
+    "description": "An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request."
 }
