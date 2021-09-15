@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.IssueTracking/IssueReporting/schema.json",
     "title": "Smart Data models - IssueReporting schema",
-    "description": "A Data Model for citizen issues, reports and feedbacks."
+    "description": "A Data Model for citizen issues, reports and feedbacks.",
+    "type": "object"
 }
