@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/schema.json",
-    "title": "Smart Data Models. Open311 Service Type"
+    "title": "Smart Data Models. Open311 Service Type",
+    "description": "As per Open311 an entity of type ServiceType is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction."
 }
