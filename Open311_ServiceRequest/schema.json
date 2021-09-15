@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "$schemaVersion": "0.1.0",
     "modelTags": "",
-    "$id": "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceRequest/schema.json"
+    "$id": "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceRequest/schema.json",
+    "title": "FIWARE - Open311 Service Request"
 }
