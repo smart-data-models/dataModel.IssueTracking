@@ -6,7 +6,7 @@ Version: 0.0.1
 A Data Model for citizen issues, reports and feedbacks.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/IssueReporting/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/IssueReporting/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/IssueReporting/doc/spec.md)
 
