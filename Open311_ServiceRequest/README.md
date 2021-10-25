@@ -6,7 +6,7 @@ Version: 0.1.0
 An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceRequest/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceRequest/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceRequest/doc/spec.md)
 
