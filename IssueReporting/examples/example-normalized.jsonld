@@ -1,49 +1,29 @@
 {
     "id": "urn:ngsi-ld:xYBR:0102",
     "type": "IssueReporting",
-    "comments": {
+    "category": {
         "type": "Property",
-        "value": "Road not in proper condition"
-    },
-    "wardId": {
-        "type": "Property",
-        "value": "4"
-    },
-    "departmentId": {
-        "type": "Property",
-        "value": "12"
-    },
-    "title": {
-        "type": "Property",
-        "value": "Road maintenance"
-    },
-    "subCategoryCode": {
-        "type": "Property",
-        "value": "RM"
-    },
-    "titleCode": {
-        "type": "Property",
-        "value": "RDM"
-    },
-    "subCategory": {
-        "type": "Property",
-        "value": "Road Repair"
-    },
-    "reportId": {
-        "type": "Property",
-        "value": "21645"
+        "value": "Maintenance"
     },
     "categoryCode": {
         "type": "Property",
         "value": "112"
     },
-    "category": {
+    "comments": {
         "type": "Property",
-        "value": "Maintenance"
+        "value": "Road not in proper condition"
+    },
+    "departmentId": {
+        "type": "Property",
+        "value": "12"
     },
     "landmark": {
         "type": "Property",
         "value": "Near St.Andrews Church"
+    },
+    "mediaURL": {
+        "type": "Property",
+        "value": "https://imgur.com"
     },
     "observationDateTime": {
         "type": "Property",
@@ -52,16 +32,35 @@
             "@value": "2021-03-11T15:51:02+05:30"
         }
     },
-    "mediaURL": {
+    "reportId": {
         "type": "Property",
-        "value": "https://imgur.com"
+        "value": "21645"
     },
     "resolutionStatus": {
         "type": "Property",
         "value": "Assigned"
     },
+    "subCategory": {
+        "type": "Property",
+        "value": "Road Repair"
+    },
+    "subCategoryCode": {
+        "type": "Property",
+        "value": "RM"
+    },
+    "title": {
+        "type": "Property",
+        "value": "Road maintenance"
+    },
+    "titleCode": {
+        "type": "Property",
+        "value": "RDM"
+    },
+    "wardId": {
+        "type": "Property",
+        "value": "4"
+    },
     "@context": [
-        "https://smartdatamodels.org/context.jsonld", 
         "iudx:IssueReporting"
     ]
 }
