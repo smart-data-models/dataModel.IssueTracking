@@ -1,38 +1,38 @@
 {
-  "id": "service-request:638344",
-  "type": "Open311ServiceRequest",
-  "service_request_id": "638344",
-  "status": "closed",
-  "status_notes": "Duplicate request.",
-  "service_name": "Aceras",
-  "service_code": "234",
-  "description": "Acera en mal estado con bordillo partido en dos",
-  "agency_responsible": "Ayuntamiento de Ciudad",
-  "requested_datetime": "2010-04-14T06:37:38-08:00",
-  "updated_datetime": "2010-04-14T06:37:38-08:00",
-  "expected_datetime": "2010-04-15T06:37:38-08:00",
-  "address_string": "Calle San Juan Bautista, 2",
-  "attributes": [
-    {
-      "code": "ISSUE_TYPE",
-      "values": [
+    "id": "service-request:638344",
+    "type": "Open311ServiceRequest",
+    "address_string": "Calle San Juan Bautista, 2",
+    "agency_responsible": "Ayuntamiento de Ciudad",
+    "attributes": [
         {
-          "key": 1,
-          "name": "Bordillo"
+            "code": "ISSUE_TYPE",
+            "values": [
+                {
+                    "key": 1,
+                    "name": "Bordillo"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      -3.164485591715449,
-      40.62785133667262
+    ],
+    "description": "Acera en mal estado con bordillo partido en dos",
+    "expected_datetime": "2010-04-15T06:37:38-08:00",
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            -3.164485591715449,
+            40.62785133667262
+        ]
+    },
+    "media_url": "http://exaple.org/media/638344.jpg",
+    "requested_datetime": "2010-04-14T06:37:38-08:00",
+    "service_code": "234",
+    "service_name": "Aceras",
+    "service_request_id": "638344",
+    "status": "closed",
+    "status_notes": "Duplicate request.",
+    "updated_datetime": "2010-04-14T06:37:38-08:00",
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/context.jsonld"
     ]
-  },
-  "media_url": "http://exaple.org/media/638344.jpg",
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
 }
