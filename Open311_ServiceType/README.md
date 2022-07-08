@@ -1,4 +1,5 @@
-# Open311_ServiceType
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
+# Open311_ServiceType
 Version: 0.0.1
 
 ## Description 
@@ -15,6 +16,10 @@ Enlace a la [Especificación en español](https://github.com/smart-data-models/d
 Lien vers le [spécification en français](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceType/doc/spec_FR.md)
 
 Link zur [deutschen Spezifikation](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceType/doc/spec_DE.md)
+
+Link alla [specifica](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceType/doc/spec_IT.md)
+
+[仕様へのリンク](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceType/doc/spec_JA.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/examples/example.json) (keyvalues) for NGSI v2
