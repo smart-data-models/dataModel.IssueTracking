@@ -1,10 +1,10 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.1.0",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.IssueTracking/services/schema.json",
     "title": "Smart Data Models. Open311 Services",
-    "description": "As per Open311 an entity of type ServiceType is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.",
+    "description": "As per Open311 an entity of type services is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.",
     "type": "object",
     "allOf": [
         {
@@ -20,7 +20,7 @@
                     "enum": [
                         "services"
                     ],
-                    "description": "Property. NGSI Entity type. It has to be services"
+                    "description": "Property. NGSI Entity type. It has to be services. Enum:'services'"
                 },
                 "jurisdiction_id": {
                     "type": "string",
