@@ -1,5 +1,5 @@
-Open311_ServiceType:
-  description: 'As per Open311 an entity of type ServiceType is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.'
+Open311_ServiceRequest:
+  description: 'An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.'
   properties:
     address:
       description: 'The mailing address'
@@ -26,6 +26,12 @@ Open311_ServiceType:
       x-ngsi:
         model: https://schema.org/address
         type: Property
+    agency_responsible:
+      description: 'Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org'
+      type: string
+      x-ngsi:
+        model: http://schema.org/provider
+        type: Property
     alternateName:
       description: 'An alternative name for this item'
       type: string
@@ -36,18 +42,6 @@ Open311_ServiceType:
       type: string
       x-ngsi:
         model: https://schema.org/Text
-        type: Property
-    attributes:
-      description: "As per the [Service Definition](http://wiki.open311.org/GeoReport_v2/#get-service-definition) structure defined by Open 311."
-      items:
-        anyOf:
-          - type: string
-          - type: object
-          - type: array
-          - type: boolean
-          - type: number
-      type: array
-      x-ngsi:
         type: Property
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
@@ -71,20 +65,40 @@ Open311_ServiceType:
       type: string
       x-ngsi:
         type: Property
-    effectiveSince:
-      description: 'The date on which the service type was created. This date might be different than the entity creation date'
-      format: date-time
+    device_id:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'The unique device ID of the device submitting the request. This is usually only used for mobile devices'
+      x-ngsi:
+        model: https://schema.org/URL
+        type: Relationship
+    email:
+      description: 'Email address of owner.'
+      format: idn-email
       type: string
       x-ngsi:
-        model: http://schema.org/DateTime
         type: Property
-    group:
-      description: 'A category to group this service type within. This provides a way to group several service request types under one category such as sanitation'
+    expected_datetime:
+      description: 'The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement'
       type: string
       x-ngsi:
+        model: https://schema.org/DateTime
+        type: Property
+    first_name:
+      description: 'Given name. In the U.S., the first name of a Person.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
         type: Property
     id:
-      anyOf: &open311_servicetype_-_properties_-_owner_-_items_-_anyof
+      anyOf: &open311_servicerequest_-_properties_-_owner_-_items_-_anyof
         - description: 'Property. Identifier format of any NGSI entity'
           maxLength: 256
           minLength: 1
@@ -101,10 +115,11 @@ Open311_ServiceType:
       type: string
       x-ngsi:
         type: Property
-    keywords:
-      description: 'A comma separated list of tags or keywords to help users identify the request type. This can provide synonyms of the service_name and group.'
+    last_name:
+      description: 'Family name. In the U.S., the last name of a Person.'
       type: string
       x-ngsi:
+        model: https://schema.org/Text
         type: Property
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
@@ -259,38 +274,36 @@ Open311_ServiceType:
           type: object
       x-ngsi:
         type: Geoproperty
-    name:
-      description: 'The name of this item.'
+    media_url:
+      description: 'A URL to media associated with the request, eg an image'
       type: string
       x-ngsi:
+        model: https://schema.org/URL
         type: Property
-    open311:metadata:
-      description: 'This field is not strictly needed as the proposed entity encompasses the attribute definition as well. If defined, its value must be `true` if the `attributes` property is defined and its array value is not empty. Otherwise it must be equal to `false`'
-      type: boolean
-      x-ngsi:
-        type: Property
-    open311:type:
-      description: 'realtime: The service request ID will be returned immediately after the service request is submitted. batch: A token will be returned immediately after the service request is submitted. This token can then be later used to return the service request ID. blackbox: No service request ID will be returned after the service request is submitted. Enum:''realtime, batch, blackbox''. '
-      enum:
-        - batch
-        - blackbox
-        - realtime
+    name:
+      description: 'The name of this item.'
       type: string
       x-ngsi:
         type: Property
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
-        anyOf: *open311_servicetype_-_properties_-_owner_-_items_-_anyof
+        anyOf: *open311_servicerequest_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
       type: array
       x-ngsi:
         type: Property
-    provider:
-      description: 'Provider of the service'
+    phone:
+      description: 'The telephone number.'
       type: string
       x-ngsi:
-        model: http://schema.org/provider
+        model: https://schema.org/Text
+        type: Property
+    requested_datetime:
+      description: 'The date and time when the service request was made'
+      type: string
+      x-ngsi:
+        model: https://schema.org/DateTime
         type: Property
     seeAlso:
       description: 'list of uri pointing to additional resources about the item'
@@ -314,17 +327,46 @@ Open311_ServiceType:
       type: string
       x-ngsi:
         type: Property
+    service_notice:
+      description: 'Information about the action expected to fulfill the request or otherwise address the information reported.'
+      type: string
+      x-ngsi:
+        type: Property
+    service_request_id:
+      description: 'The unique ID of the service request created.'
+      type: string
+      x-ngsi:
+        type: Property
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
       type: string
       x-ngsi:
         type: Property
-    type:
-      description: 'NGSI Entity type. It has to be Open311ServiceType'
+    status:
+      description: 'Allows one to search for requests which have a specific status. This defaults to all statuses; can be declared multiple times, comma delimited. Enum:''open, closed'''
       enum:
-        - Open311ServiceType
+        - closed
+        - open
       type: string
       x-ngsi:
+        type: Property
+    status_notes:
+      description: 'Explanation of why status was changed to current state or more details on current status than conveyed with status alone.'
+      type: string
+      x-ngsi:
+        type: Property
+    type:
+      description: 'NGSI Entity type. It has to be Open311ServiceRequest'
+      enum:
+        - Open311ServiceRequest
+      type: string
+      x-ngsi:
+        type: Property
+    updated_datetime:
+      description: 'The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed'
+      type: string
+      x-ngsi:
+        model: https://schema.org/DateTime
         type: Property
   required:
     - id
@@ -332,7 +374,7 @@ Open311_ServiceType:
   type: object
   x-derived-from: ""
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
-  x-license-url: https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceType/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/schema.json
+  x-license-url: https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/service_requests/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.IssueTracking/service_requests/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.1.0

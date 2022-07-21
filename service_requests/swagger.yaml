@@ -5,13 +5,13 @@
 
 components:
   schemas: 
-    Open311_ServiceType: 
-      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/model.yaml#/Open311_ServiceType"
+    Open311_ServiceRequest: 
+      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/service_requests/model.yaml#/service_requests"
 info:
   description:  |
-    As per Open311 an entity of type ServiceType is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.
-  title: Open311_ServiceType
-  version: "1.0.0"
+    An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.
+  title: service_requests
+  version: "0.1.0"
 openapi: "3.0.0"
 
 paths: 
@@ -25,7 +25,7 @@ paths:
           required: true
           schema: 
             enum: 
-              - Open311_ServiceType
+              - service_requests
             type: string
       responses: 
         ? "200"
@@ -37,12 +37,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/examples/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/service_requests/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/Open311_ServiceType/examples/example-normalized.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.IssueTracking/service_requests/examples/example-normalized.jsonld"
           description: OK
       tags: 
         - ngsi-ld
