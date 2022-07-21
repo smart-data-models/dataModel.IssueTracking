@@ -1,4 +1,4 @@
-Open311_ServiceRequest:
+service_requests:
   description: 'An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.'
   properties:
     address:
@@ -98,7 +98,7 @@ Open311_ServiceRequest:
         model: https://schema.org/Text
         type: Property
     id:
-      anyOf: &open311_servicerequest_-_properties_-_owner_-_items_-_anyof
+      anyOf: &service_requests_-_properties_-_owner_-_items_-_anyof
         - description: 'Property. Identifier format of any NGSI entity'
           maxLength: 256
           minLength: 1
@@ -288,7 +288,7 @@ Open311_ServiceRequest:
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
-        anyOf: *open311_servicerequest_-_properties_-_owner_-_items_-_anyof
+        anyOf: *service_requests_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
       type: array
       x-ngsi:
@@ -356,9 +356,9 @@ Open311_ServiceRequest:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be Open311ServiceRequest'
+      description: 'NGSI Entity type. It has to be service_requests. Enum:''service_requests'''
       enum:
-        - Open311ServiceRequest
+        - service_requests
       type: string
       x-ngsi:
         type: Property
