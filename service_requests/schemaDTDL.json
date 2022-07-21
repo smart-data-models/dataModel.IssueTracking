@@ -1,10 +1,10 @@
 {
-    "@id": "dtmi:com:ngsi-ld:Open311ServiceRequest;0",
+    "@id": "dtmi:com:ngsi-ld:service_requests;0",
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
-    "comment": "FIWARE - Open311 Service Request adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceRequest/schema.json",
+    "comment": "FIWARE - Open311 Service Requests adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/service_requests/schema.json",
     "description": "An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.",
-    "displayName": "Open311ServiceRequest",
+    "displayName": "service_requests",
     "contents": [
         {
             "name": "agency_responsible",
