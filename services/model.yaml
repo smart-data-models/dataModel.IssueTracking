@@ -1,5 +1,5 @@
-Open311_ServiceType:
-  description: 'As per Open311 an entity of type ServiceType is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.'
+services:
+  description: 'As per Open311 an entity of type services is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.'
   properties:
     address:
       description: 'The mailing address'
@@ -84,7 +84,7 @@ Open311_ServiceType:
       x-ngsi:
         type: Property
     id:
-      anyOf: &open311_servicetype_-_properties_-_owner_-_items_-_anyof
+      anyOf: &services_-_properties_-_owner_-_items_-_anyof
         - description: 'Property. Identifier format of any NGSI entity'
           maxLength: 256
           minLength: 1
@@ -281,7 +281,7 @@ Open311_ServiceType:
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
-        anyOf: *open311_servicetype_-_properties_-_owner_-_items_-_anyof
+        anyOf: *services_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
       type: array
       x-ngsi:
@@ -320,9 +320,9 @@ Open311_ServiceType:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be Open311ServiceType'
+      description: 'NGSI Entity type. It has to be services. Enum:''services'''
       enum:
-        - Open311ServiceType
+        - services
       type: string
       x-ngsi:
         type: Property
@@ -335,4 +335,4 @@ Open311_ServiceType:
   x-license-url: https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/services/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.IssueTracking/services/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.1.0
