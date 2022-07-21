@@ -7,14 +7,14 @@ In the medium term, might propose to the Open311 Community a harmonized data mod
 The following entity types are available:
 - [IssueReporting](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/IssueReporting/README.md). A Data Model for citizen issues, reports and feedbacks.
 
-- [Open311_ServiceRequest](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceRequest/README.md). An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.
+- [service_requests](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/service_requests/README.md). An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.
 
-- [Open311_ServiceType](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/Open311_ServiceType/README.md). As per Open311 an entity of type ServiceType is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.
+- [services](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/services/README.md). As per Open311 an entity of type services is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.
 
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/CONTRIBUTORS.yaml) to the 4 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
 
 
 ### Contribution
