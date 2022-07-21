@@ -1,10 +1,10 @@
 {
-    "@id": "dtmi:com:ngsi-ld:Open311ServiceType;0",
+    "@id": "dtmi:com:ngsi-ld:services;0",
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
-    "comment": "Smart Data Models. Open311 Service Type adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/Open311_ServiceType/schema.json",
-    "description": "As per Open311 an entity of type ServiceType is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.",
-    "displayName": "Open311ServiceType",
+    "comment": "Smart Data Models. Open311 Services adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/services/schema.json",
+    "description": "As per Open311 an entity of type services is an acceptable 311 service request type. A request type can be unique to the city/jurisdiction.",
+    "displayName": "services",
     "contents": [
         {
             "name": "alternateName",
@@ -141,36 +141,6 @@
         },
         {
             "@type": "Telemetry",
-            "name": "location_Point",
-            "schema": "point"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_LineString",
-            "schema": "lineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Polygon",
-            "schema": "polygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiLineString",
-            "schema": "multiLineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPolygon",
-            "schema": "multiPolygon"
-        },
-        {
-            "@type": "Telemetry",
             "name": "attributes",
             "schema": {
                 "@type": "Array",
@@ -220,6 +190,36 @@
                     "schema": "string"
                 }
             ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
         },
         {
             "@type": "Telemetry",
