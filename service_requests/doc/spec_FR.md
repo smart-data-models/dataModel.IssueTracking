@@ -1,21 +1,35 @@
-Entité : Demande de service Open311  
-===================================  
-[Licence ouverte] (https://github.com/smart-data-models//dataModel.IssueTracking/blob/master/Open311_ServiceRequest/LICENSE.md)  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : service_requests  
+=========================<!-- /10-Header -->  
+<!-- 15-License -->  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.IssueTracking/blob/master/service_requests/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Une entité de type ServiceRequest est une demande de service Open 311 acceptable. Une telle entité englobe toutes les propriétés définies par Open 311 à POST Service Request et GET Service Request.**  
 version : 0.1.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `agency_responsible`: Veuillez noter que cela est sémantiquement équivalent à la propriété provider (sous-propriété name) de schema.org  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `device_id`: L'identifiant unique de l'appareil qui soumet la demande. Il n'est généralement utilisé que pour les appareils mobiles.  - `email`: Adresse électronique du propriétaire.  - `expected_datetime`: La date et l'heure auxquelles on peut s'attendre à ce que la demande de service soit satisfaite. Cela peut être basé sur un accord de niveau de service spécifique au service.  - `first_name`: Prénom. Aux États-Unis, le prénom d'une personne.  - `id`: Identifiant unique de l'entité  - `jurisdiction_id`: L'ID unique de l'entité juridique du service (c'est-à-dire la ville).  - `last_name`: Nom de famille. Aux États-Unis, le nom de famille d'une personne.  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `media_url`: Une URL vers un média associé à la demande, par exemple une image.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `phone`: Le numéro de téléphone.  - `requested_datetime`: La date et l'heure auxquelles la demande de service a été effectuée  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `service_code`: L'identifiant unique pour le type de demande de service.  - `service_name`: Le nom lisible par l'homme du type de demande de service.  - `service_notice`: Informations sur l'action attendue pour répondre à la demande ou traiter autrement les informations signalées.  - `service_request_id`: L'ID unique de la demande de service créée.  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `status`: Permet de rechercher les demandes qui ont un statut spécifique. Par défaut, il s'agit de tous les statuts ; peut être déclaré plusieurs fois, délimité par des virgules. Enum : 'open, closed' (ouvert, fermé)  - `status_notes`: Explication de la raison pour laquelle l'état a été changé en état actuel ou plus de détails sur l'état actuel que ceux transmis par l'état seul.  - `type`: Type d'entité NGSI. Il doit être Open311ServiceRequest.  - `updated_datetime`: La date et l'heure de la dernière modification de la demande de service. Pour les demandes dont le statut est "fermé", il s'agit de la date de clôture de la demande.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `agency_responsible[string]`: Veuillez noter que cela est sémantiquement équivalent à la propriété provider (sous-propriété name) de schema.org  . Model: [http://schema.org/provider](http://schema.org/provider)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `device_id[*]`: L'identifiant unique de l'appareil qui soumet la demande. Il n'est généralement utilisé que pour les appareils mobiles.  . Model: [https://schema.org/URL](https://schema.org/URL)- `email[string]`: Adresse électronique du propriétaire.  - `expected_datetime[string]`: La date et l'heure auxquelles on peut s'attendre à ce que la demande de service soit satisfaite. Cela peut être basé sur un accord de niveau de service spécifique au service.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `first_name[string]`: Prénom. Aux États-Unis, le prénom d'une personne.  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Identifiant unique de l'entité  - `jurisdiction_id[string]`: L'ID unique de l'entité juridique du service (c'est-à-dire la ville).  - `last_name[string]`: Nom de famille. Aux États-Unis, le nom de famille d'une personne.  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `media_url[string]`: Une URL vers un média associé à la demande, par exemple une image.  . Model: [https://schema.org/URL](https://schema.org/URL)- `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `phone[string]`: Le numéro de téléphone.  . Model: [https://schema.org/Text](https://schema.org/Text)- `requested_datetime[string]`: La date et l'heure auxquelles la demande de service a été effectuée  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `service_code[string]`: L'identifiant unique pour le type de demande de service.  - `service_name[string]`: Le nom lisible par l'homme du type de demande de service.  - `service_notice[string]`: Informations sur l'action attendue pour répondre à la demande ou traiter autrement les informations signalées.  - `service_request_id[string]`: L'ID unique de la demande de service créée.  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `status[string]`: Permet de rechercher les demandes qui ont un statut spécifique. Par défaut, il s'agit de tous les statuts ; peut être déclaré plusieurs fois, délimité par des virgules. Enum : 'open, closed' (ouvert, fermé)  - `status_notes[string]`: Explication de la raison pour laquelle l'état a été changé en état actuel ou plus de détails sur l'état actuel que ceux transmis par l'état seul.  - `type[string]`: Type d'entité NGSI. Il doit s'agir de service_requests. Enum : 'service_requests' (Demandes de service)  - `updated_datetime[string]`: La date et l'heure de la dernière modification de la demande de service. Pour les demandes dont le statut est fermé, il s'agit de la date de clôture de la demande.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Une entité de type `ServiceRequest` est une demande de service Open 311 acceptable. Une telle entité englobe toutes les propriétés définies par Open 311 à [POST Service Request](http://wiki.open311.org/GeoReport_v2/#post-service-request) et [GET Service Request](http://wiki.open311.org/GeoReport_v2/#get-service-request). En utilisant ce modèle de données et une implémentation FIWARE NGSI version 2, il est facile d'implémenter un service conforme aux spécifications de l'Open 311.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
-Open311_ServiceRequest:    
+service_requests:    
   description: 'An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.'    
   properties:    
     address:    
@@ -115,7 +129,7 @@ Open311_ServiceRequest:
         model: https://schema.org/Text    
         type: Property    
     id:    
-      anyOf: &open311_servicerequest_-_properties_-_owner_-_items_-_anyof    
+      anyOf: &service_requests_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
@@ -305,7 +319,7 @@ Open311_ServiceRequest:
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *open311_servicerequest_-_properties_-_owner_-_items_-_anyof    
+        anyOf: *service_requests_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
@@ -373,9 +387,9 @@ Open311_ServiceRequest:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be Open311ServiceRequest'    
+      description: 'NGSI Entity type. It has to be service_requests. Enum:''service_requests'''    
       enum:    
-        - Open311ServiceRequest    
+        - service_requests    
       type: string    
       x-ngsi:    
         type: Property    
@@ -389,12 +403,22 @@ Open311_ServiceRequest:
     - id    
     - type    
   type: object    
-  version: 0.1.0    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/service_requests/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.IssueTracking/service_requests/schema.json    
+  x-model-tags: ""    
+  x-version: 0.1.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
-#### Open311_ServiceRequest Valeurs-clés NGSI-v2 Exemple  
-Voici un exemple de demande de service Open311_ServiceRequest au format JSON-LD sous forme de valeurs de clé. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et retourne les données contextuelles d'une entité individuelle.  
+#### service_requests valeurs-clés NGSI-v2 Exemple  
+Voici un exemple de service_requests au format JSON-LD en tant que key-values. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "service-request:638344",  
@@ -431,219 +455,119 @@ Open311_ServiceRequest:
   "media_url": "http://exaple.org/media/638344.jpg"  
 }  
 ```  
-#### Open311_ServiceRequest NGSI-v2 normalisé Exemple  
-Voici un exemple d'une Open311_ServiceRequest au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+</details>  
+#### service_requests NGSI-v2 normalisé Exemple  
+Voici un exemple de service_requests au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
-{  
-  "id": "service-request:638344",  
-  "type": "Open311ServiceRequest",  
-  "status": {  
-    "type": "Text",  
-    "value": "closed"  
-  },  
-  "description": {  
-    "type": "Text",  
-    "value": "Acera en mal estado con bordillo partido en dos"  
-  },  
-  "service_code": {  
-    "type": "Text",  
-    "value": "234"  
-  },  
-  "status_notes": {  
-    "type": "Text",  
-    "value": "Duplicate request."  
-  },  
-  "service_name": {  
-    "type": "Text",  
-    "value": "Aceras"  
-  },  
-  "service_request_id": {  
-    "type": "Text",  
-    "value": "638344"  
-  },  
-  "updated_datetime": {  
-    "type": "DateTime",  
-    "value": "2010-04-14T06:37:38-08:00"  
-  },  
-  "address_string": {  
-    "type": "Text",  
-    "value": "Calle San Juan Bautista, 2"  
-  },  
-  "requested_datetime": {  
-    "type": "DateTime",  
-    "value": "2010-04-14T06:37:38-08:00"  
-  },  
-  "location": {  
-    "type": "geo:json",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.164485591715449,  
-        40.62785133667262  
-      ]  
-    }  
-  },  
-  "attributes": {  
-    "type": "Text",  
-    "value": [  
-      {  
-        "code": "ISSUE_TYPE",  
-        "values": [  
-          {  
-            "key": 1,  
-            "name": "Bordillo"  
-          }  
-        ]  
-      }  
-    ]  
-  },  
-  "expected_datetime": {  
-    "type": "DateTime",  
-    "value": "2010-04-15T06:37:38-08:00"  
-  },  
-  "agency_responsible": {  
-    "type": "Text",  
-    "value": "Ayuntamiento de Ciudad"  
-  },  
-  "media_url": {  
-    "type": "Text",  
-    "value": "http://exaple.org/media/638344.jpg"  
-  }  
-}  
 ```  
-#### Open311_ServiceRequest Valeurs-clés NGSI-LD Exemple  
-Voici un exemple de demande de service Open311_ServiceRequest au format JSON-LD sous forme de valeurs de clé. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et retourne les données contextuelles d'une entité individuelle.  
+</details>  
+#### service_requests valeurs-clés NGSI-LD Exemple  
+Voici un exemple de service_requests au format JSON-LD en tant que key-values. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+```  
+</details>  
+#### service_requests NGSI-LD normalisé Exemple  
+Voici un exemple de service_requests au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "service-request:638344",  
-  "type": "Open311ServiceRequest",  
-  "service_request_id": "638344",  
-  "status": "closed",  
-  "status_notes": "Duplicate request.",  
-  "service_name": "Aceras",  
-  "service_code": "234",  
-  "description": "Acera en mal estado con bordillo partido en dos",  
-  "agency_responsible": "Ayuntamiento de Ciudad",  
-  "requested_datetime": "2010-04-14T06:37:38-08:00",  
-  "updated_datetime": "2010-04-14T06:37:38-08:00",  
-  "expected_datetime": "2010-04-15T06:37:38-08:00",  
-  "address_string": "Calle San Juan Bautista, 2",  
-  "attributes": [  
-    {  
-      "code": "ISSUE_TYPE",  
-      "values": [  
-        {  
-          "key": 1,  
-          "name": "Bordillo"  
+    "id": "urn:ngsi-ld:Open311ServiceRequest:service-request:638344",  
+    "type": "Open311ServiceRequest",  
+    "address_string": {  
+        "type": "Property",  
+        "value": "Calle San Juan Bautista, 2"  
+    },  
+    "agency_responsible": {  
+        "type": "Property",  
+        "value": "Ayuntamiento de Ciudad"  
+    },  
+    "attributes": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "code": "ISSUE_TYPE",  
+                "values": [  
+                    {  
+                        "key": 1,  
+                        "name": "Bordillo"  
+                    }  
+                ]  
+            }  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Acera en mal estado con bordillo partido en dos"  
+    },  
+    "expected_datetime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2010-04-15T06:37:38-08:00Z"  
         }  
-      ]  
-    }  
-  ],  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -3.164485591715449,  
-      40.62785133667262  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.164485591715449,  
+                40.62785133667262  
+            ]  
+        }  
+    },  
+    "media_url": {  
+        "type": "Property",  
+        "value": "http://exaple.org/media/638344.jpg"  
+    },  
+    "requested_datetime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2010-04-14T06:37:38-08:00"  
+        }  
+    },  
+    "service_code": {  
+        "type": "Property",  
+        "value": "234"  
+    },  
+    "service_name": {  
+        "type": "Property",  
+        "value": "Aceras"  
+    },  
+    "service_request_id": {  
+        "type": "Property",  
+        "value": "638344"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "closed"  
+    },  
+    "status_notes": {  
+        "type": "Property",  
+        "value": "Duplicate request."  
+    },  
+    "updated_datetime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2010-04-14T06:37:38-08:00"  
+        }  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/context.jsonld"  
     ]  
-  },  
-  "media_url": "http://exaple.org/media/638344.jpg",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### Open311_ServiceRequest NGSI-LD normalisé Exemple  
-Voici un exemple d'une Open311_ServiceRequest au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-```json  
-{  
-  "id": "urn:ngsi-ld:Open311ServiceRequest:service-request:638344",  
-  "type": "Open311ServiceRequest",  
-  "status": {  
-    "type": "Property",  
-    "value": "closed"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Acera en mal estado con bordillo partido en dos"  
-  },  
-  "service_code": {  
-    "type": "Property",  
-    "value": "234"  
-  },  
-  "status_notes": {  
-    "type": "Property",  
-    "value": "Duplicate request."  
-  },  
-  "service_name": {  
-    "type": "Property",  
-    "value": "Aceras"  
-  },  
-  "service_request_id": {  
-    "type": "Property",  
-    "value": "638344"  
-  },  
-  "updated_datetime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2010-04-14T06:37:38-08:00"  
-    }  
-  },  
-  "address_string": {  
-    "type": "Property",  
-    "value": "Calle San Juan Bautista, 2"  
-  },  
-  "requested_datetime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2010-04-14T06:37:38-08:00"  
-    }  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.164485591715449,  
-        40.62785133667262  
-      ]  
-    }  
-  },  
-  "attributes": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "code": "ISSUE_TYPE",  
-        "values": [  
-          {  
-            "key": 1,  
-            "name": "Bordillo"  
-          }  
-        ]  
-      }  
-    ]  
-  },  
-  "expected_datetime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2010-04-15T06:37:38-08:00Z"  
-    }  
-  },  
-  "agency_responsible": {  
-    "type": "Property",  
-    "value": "Ayuntamiento de Ciudad"  
-  },  
-  "media_url": {  
-    "type": "Property",  
-    "value": "http://exaple.org/media/638344.jpg"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
-}  
-```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
