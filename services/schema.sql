@@ -1,0 +1,3 @@
+/* (Beta) Export of data model services of the subject dataModel.IssueTracking for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE open311:type_type AS ENUM ('batch', 'blackbox', 'realtime');CREATE TYPE services_type AS ENUM ('services');
+CREATE TABLE services (address json, alternateName text, areaServed text, attributes json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, effectiveSince timestamp, group text, id text, jurisdiction_id text, keywords text, location json, name text, open311:metadata text, open311:type open311:type_type, owner json, provider text, seeAlso json, service_code text, service_name text, source text, type services_type);
