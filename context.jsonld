@@ -1,5 +1,6 @@
 {
     "@context": {
+        "IssueReporting": "https://smartdatamodels.org/dataModel.IssueTracking/IssueReporting",
         "address": "https://smartdatamodels.org/address",
         "agency_responsible": "https://smartdatamodels.org/dataModel.IssueTracking/agency_responsible",
         "alternateName": "https://smartdatamodels.org/alternateName",
@@ -46,6 +47,8 @@
         "service_name": "https://smartdatamodels.org/dataModel.IssueTracking/service_name",
         "service_notice": "https://smartdatamodels.org/dataModel.IssueTracking/service_notice",
         "service_request_id": "https://smartdatamodels.org/dataModel.IssueTracking/service_request_id",
+        "service_requests": "https://smartdatamodels.org/dataModel.IssueTracking/service_requests",
+        "services": "https://smartdatamodels.org/dataModel.IssueTracking/services",
         "source": "https://smartdatamodels.org/source",
         "status": "ngsi-ld:status",
         "status_notes": "https://smartdatamodels.org/dataModel.IssueTracking/status_notes",
