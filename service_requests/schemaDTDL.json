@@ -12,7 +12,7 @@
             "displayName": "agency_responsible",
             "@type": "Property",
             "schema": "string",
-            "comment": "Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org"
+            "comment": "Property. Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org. Model:'http://schema.org/provider'"
         },
         {
             "name": "alternateName",
@@ -81,7 +81,7 @@
             "displayName": "expected_datetime",
             "@type": "Property",
             "schema": "string",
-            "comment": "The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement"
+            "comment": "Property. The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement. Model:'https://schema.org/DateTime'"
         },
         {
             "name": "first_name",
@@ -97,7 +97,7 @@
             "displayName": "jurisdiction_id",
             "@type": "Property",
             "schema": "string",
-            "comment": "The unique ID of the legal entity of the service (i.e. city)."
+            "comment": "Property. The unique ID of the legal entity of the service (i.e. city)."
         },
         {
             "name": "last_name",
@@ -108,12 +108,17 @@
             "comment": "Family name. In the U.S., the last name of a Person."
         },
         {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
             "name": "media_url",
             "writable": true,
             "displayName": "media_url",
             "@type": "Property",
             "schema": "string",
-            "comment": "A URL to media associated with the request, eg an image"
+            "comment": "Property. A URL to media associated with the request, eg an image. Model:'https://schema.org/URL'"
         },
         {
             "name": "name",
@@ -137,7 +142,7 @@
             "displayName": "requested_datetime",
             "@type": "Property",
             "schema": "string",
-            "comment": "The date and time when the service request was made"
+            "comment": "Property. The date and time when the service request was made. Model:'https://schema.org/DateTime'"
         },
         {
             "name": "seeAlso",
@@ -150,7 +155,7 @@
             "displayName": "service_code",
             "@type": "Property",
             "schema": "string",
-            "comment": "The unique identifier for the service request type."
+            "comment": "Property. The unique identifier for the service request type."
         },
         {
             "name": "service_name",
@@ -158,7 +163,7 @@
             "displayName": "service_name",
             "@type": "Property",
             "schema": "string",
-            "comment": "The human readable name of the service request type."
+            "comment": "Property. The human readable name of the service request type."
         },
         {
             "name": "service_notice",
@@ -166,7 +171,7 @@
             "displayName": "service_notice",
             "@type": "Property",
             "schema": "string",
-            "comment": "Information about the action expected to fulfill the request or otherwise address the information reported."
+            "comment": "Property. Information about the action expected to fulfill the request or otherwise address the information reported."
         },
         {
             "name": "service_request_id",
@@ -174,7 +179,7 @@
             "displayName": "service_request_id",
             "@type": "Property",
             "schema": "string",
-            "comment": "The unique ID of the service request created."
+            "comment": "Property. The unique ID of the service request created."
         },
         {
             "name": "source",
@@ -190,7 +195,7 @@
             "displayName": "status_notes",
             "@type": "Property",
             "schema": "string",
-            "comment": "Explanation of why status was changed to current state or more details on current status than conveyed with status alone."
+            "comment": "Property. Explanation of why status was changed to current state or more details on current status than conveyed with status alone."
         },
         {
             "name": "updated_datetime",
@@ -198,7 +203,7 @@
             "displayName": "updated_datetime",
             "@type": "Property",
             "schema": "string",
-            "comment": "The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed"
+            "comment": "Property. The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed. Model:'https://schema.org/DateTime'"
         },
         {
             "@type": "Telemetry",
@@ -229,6 +234,10 @@
                     "schema": "string"
                 },
                 {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
                     "name": "postOfficeBoxNumber",
                     "schema": "string"
                 },
@@ -239,38 +248,12 @@
                 {
                     "name": "streetAddress",
                     "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
                 }
             ]
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Point",
-            "schema": "point"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_LineString",
-            "schema": "lineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Polygon",
-            "schema": "polygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiLineString",
-            "schema": "multiLineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPolygon",
-            "schema": "multiPolygon"
         },
         {
             "@type": "Telemetry",
