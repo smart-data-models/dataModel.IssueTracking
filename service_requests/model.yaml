@@ -33,7 +33,7 @@ service_requests:
         model: https://schema.org/address
         type: Property
     agency_responsible:
-      description: Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org
+      description: 'Property. Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org. Model:''http://schema.org/provider'''
       type: string
       x-ngsi:
         model: http://schema.org/provider
@@ -81,7 +81,7 @@ service_requests:
         - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: The unique device ID of the device submitting the request. This is usually only used for mobile devices
+      description: 'Relationship. The unique device ID of the device submitting the request. This is usually only used for mobile devices. Model:''https://schema.org/URL'''
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
@@ -92,7 +92,7 @@ service_requests:
       x-ngsi:
         type: Property
     expected_datetime:
-      description: The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement
+      description: 'Property. The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement. Model:''https://schema.org/DateTime'''
       type: string
       x-ngsi:
         model: https://schema.org/DateTime
@@ -117,7 +117,7 @@ service_requests:
       x-ngsi:
         type: Property
     jurisdiction_id:
-      description: The unique ID of the legal entity of the service (i.e. city).
+      description: Property. The unique ID of the legal entity of the service (i.e. city).
       type: string
       x-ngsi:
         type: Property
@@ -281,7 +281,7 @@ service_requests:
       x-ngsi:
         type: GeoProperty
     media_url:
-      description: 'A URL to media associated with the request, eg an image'
+      description: 'Property. A URL to media associated with the request, eg an image. Model:''https://schema.org/URL'''
       type: string
       x-ngsi:
         model: https://schema.org/URL
@@ -306,7 +306,7 @@ service_requests:
         model: https://schema.org/Text
         type: Property
     requested_datetime:
-      description: The date and time when the service request was made
+      description: 'Property. The date and time when the service request was made. Model:''https://schema.org/DateTime'''
       type: string
       x-ngsi:
         model: https://schema.org/DateTime
@@ -324,22 +324,22 @@ service_requests:
       x-ngsi:
         type: Property
     service_code:
-      description: The unique identifier for the service request type.
+      description: Property. The unique identifier for the service request type.
       type: string
       x-ngsi:
         type: Property
     service_name:
-      description: The human readable name of the service request type.
+      description: Property. The human readable name of the service request type.
       type: string
       x-ngsi:
         type: Property
     service_notice:
-      description: Information about the action expected to fulfill the request or otherwise address the information reported.
+      description: Property. Information about the action expected to fulfill the request or otherwise address the information reported.
       type: string
       x-ngsi:
         type: Property
     service_request_id:
-      description: The unique ID of the service request created.
+      description: Property. The unique ID of the service request created.
       type: string
       x-ngsi:
         type: Property
@@ -349,7 +349,7 @@ service_requests:
       x-ngsi:
         type: Property
     status:
-      description: 'Allows one to search for requests which have a specific status. This defaults to all statuses; can be declared multiple times, comma delimited. Enum:''open, closed'''
+      description: 'Property. Allows one to search for requests which have a specific status. This defaults to all statuses; can be declared multiple times, comma delimited. Enum:''open, closed'''
       enum:
         - closed
         - open
@@ -357,19 +357,19 @@ service_requests:
       x-ngsi:
         type: Property
     status_notes:
-      description: Explanation of why status was changed to current state or more details on current status than conveyed with status alone.
+      description: Property. Explanation of why status was changed to current state or more details on current status than conveyed with status alone.
       type: string
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be service_requests. Enum:''service_requests'''
+      description: 'Property. NGSI Entity type. It has to be service_requests. Enum:''service_requests'''
       enum:
         - service_requests
       type: string
       x-ngsi:
         type: Property
     updated_datetime:
-      description: 'The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed'
+      description: 'Property. The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed. Model:''https://schema.org/DateTime'''
       type: string
       x-ngsi:
         model: https://schema.org/DateTime
