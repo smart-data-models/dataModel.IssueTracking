@@ -61,7 +61,6 @@
         "value": "4"
     },
     "@context": [
-        "iudx:IssueReporting",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/context.jsonld"
     ]
 }
