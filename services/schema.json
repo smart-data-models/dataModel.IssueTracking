@@ -24,7 +24,7 @@
                 },
                 "jurisdiction_id": {
                     "type": "string",
-                    "description": "Property. The unique ID of the legal entity of the service (i.e. city)."
+                    "description": "Property. The unique ID of the legal entity of the service (i.e. city)"
                 },
                 "open311:type": {
                     "type": "string",
@@ -37,15 +37,15 @@
                 },
                 "service_code": {
                     "type": "string",
-                    "description": "Property. The unique identifier for the service request type."
+                    "description": "Property. The unique identifier for the service request type"
                 },
                 "service_name": {
                     "type": "string",
-                    "description": "Property. The human readable name of the service request type."
+                    "description": "Property. The human readable name of the service request type"
                 },
                 "keywords": {
                     "type": "string",
-                    "description": "Property. A comma separated list of tags or keywords to help users identify the request type. This can provide synonyms of the service_name and group."
+                    "description": "Property. A comma separated list of tags or keywords to help users identify the request type. This can provide synonyms of the service_name and group"
                 },
                 "group": {
                     "type": "string",
@@ -57,7 +57,7 @@
                 },
                 "attributes": {
                     "type": "array",
-                    "description": "Property. As per the [Service Definition](http://wiki.open311.org/GeoReport_v2/#get-service-definition) structure defined by Open 311.",
+                    "description": "Property. As per the [Service Definition](http://wiki.open311.org/GeoReport_v2/#get-service-definition) structure defined by Open 311",
                     "items": {
                         "anyOf": [
                             {
