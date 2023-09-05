@@ -1,26 +1,33 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-エンティティ：service_requests  
-=======================<!-- /10-Header -->  
+エンティティ: service_requests  
+========================<!-- /10-Header -->  
 <!-- 15-License -->  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.IssueTracking/blob/master/service_requests/LICENSE.md)  
-[文書が自動的に生成されます](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープン・ライセンス](https://github.com/smart-data-models//dataModel.IssueTracking/blob/master/service_requests/LICENSE.md)  
+[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな記述です：**ServiceRequestタイプのエンティティは、受け入れられるOpen 311のサービスリクエストである。このようなエンティティは、POST Service RequestとGET Service RequestでOpen 311によって定義されたすべてのプロパティを包含する**。  
-バージョン：0.1.0  
+グローバル記述：**ServiceRequest型のエンティティは、受け入れ可能なOpen 311サービスリクエストである。このようなエンティティは、Open 311 が POST Service Request および GET Service Request で定義したすべてのプロパティを包含する**。  
+バージョン: 0.1.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティ一覧  
+## プロパティのリスト  
 
-<sup><sub>[*] 属性に型がない場合は、複数の型や異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `agency_responsible[string]`: これは、schema.orgのプロバイダプロパティ（nameサブプロパティ）と意味的に同等であることに留意してください。  . Model: [http://schema.org/provider](http://schema.org/provider)- `alternateName[string]`: このアイテムの別称  - `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `device_id[*]`: リクエストを送信するデバイスの一意のデバイスIDです。これは通常、モバイルデバイスにのみ使用されます  . Model: [https://schema.org/URL](https://schema.org/URL)- `email[string]`: 所有者の電子メールアドレス  - `expected_datetime[string]`: サービス要求が達成されると予想される日時をいう。これは、サービス固有のサービスレベル契約に基づいている場合がある。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `first_name[string]`: Given name（ジブンネーム）。米国では、Personのファーストネーム。  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: エンティティの一意な識別子  - `jurisdiction_id[string]`: サービスの法人（市など）のユニークなIDです。  - `last_name[string]`: Family name（ファミリーネーム）。米国ではPersonのラストネーム。  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: アイテムへの Geojson 参照。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon のいずれかである。  - `media_url[string]`: リクエストに関連するメディア（例：画像）の URL。  . Model: [https://schema.org/URL](https://schema.org/URL)- `name[string]`: この項目の名称です。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `phone[string]`: 電話番号のことです。  . Model: [https://schema.org/Text](https://schema.org/Text)- `requested_datetime[string]`: サービス要求が行われた日時  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `service_code[string]`: サービス要求タイプに対応する一意の識別子。  - `service_name[string]`: サービス要求タイプの人間が読める名前。  - `service_notice[string]`: 要求を満たすため、あるいは報告された情報に対処するために期待される行動に関する情報。  - `service_request_id[string]`: 作成されたサービスリクエストのユニークなIDです。  - `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `status[string]`: 特定のステータスを持つリクエストを検索できるようにします。デフォルトはすべてのステータスで、カンマ区切りで複数回宣言することができます。Enum:'オープン、クローズ'  - `status_notes[string]`: ステータスが現在の状態になった理由や、ステータスだけでは伝わらない現在の状態の詳細について説明する。  - `type[string]`: NGSI Entityタイプ。service_requestsでなければならない。Enum:'service_requests'（サービスリクエスト）。  - `updated_datetime[string]`: サービスリクエストが最後に変更された日時です。status=closedのリクエストの場合、これはリクエストがクローズされた日付になります。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)<!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 番地がある地域と、その地域に含まれる地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: その地域がある地域、またその国がある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区とは行政区画の一種で、国によっては地方自治体によって管理されている。    
+	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `agency_responsible[string]`: これは、schema.orgのプロバイダ・プロパティ（nameサブプロパティ）と意味的に同等であることに注意してください。  . Model: [http://schema.org/provider](http://schema.org/provider)- `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `device_id[*]`: リクエストを送信するデバイスの一意なデバイスID。これは通常モバイルデバイスにのみ使用されます。  . Model: [https://schema.org/URL](https://schema.org/URL)- `email[idn-email]`: 所有者のEメールアドレス  - `expected_datetime[string]`: サービス要求が達成されると予想される日時。これは、サービス固有のサービスレベル契約に基づいている場合があります。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `first_name[string]`: ジブンネーム。米国では、人物のファーストネームは以下の通り。  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: エンティティの一意識別子  - `jurisdiction_id[string]`: サービスの法人（例：市）の固有ID  - `last_name[string]`: 姓。米国では、姓は「人」である。  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `media_url[string]`: リクエストに関連するメディアのURL（例：画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `name[string]`: このアイテムの名前  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `phone[string]`: 電話番号  . Model: [https://schema.org/Text](https://schema.org/Text)- `requested_datetime[string]`: サービスリクエストが行われた日時  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `service_code[string]`: サービス要求タイプの一意な識別子  - `service_name[string]`: サービス要求タイプの人間が読める名前  - `service_notice[string]`: 要請を満たすため、または報告された情報に対処するために期待される措置に関する情報  - `service_request_id[string]`: 作成されたサービスリクエストの固有ID  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `status[string]`: 特定のステータスを持つリクエストを検索できるようにします。カンマ区切りで複数回宣言することができます。列挙型:'オープン、クローズ  - `status_notes[string]`: ステータスが現在の状態に変更された理由の説明、またはステータスのみで伝えられるよりも詳細な現在のステータスの説明  - `type[string]`: NGSIエンティティタイプ。これは service_requests でなければならない。Enum:'サービスリクエスト'  - `updated_datetime[string]`: サービスリクエストが最後に変更された日時。status=closedのリクエストの場合、これはリクエストがクローズされた日付になります。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-ServiceRequest`型のエンティティは、受け入れられるOpen 311のサービスリクエストである。このようなエンティティは、Open 311 が [POST Service Request](http://wiki.open311.org/GeoReport_v2/#post-service-request) と [GET Service Request](http://wiki.open311.org/GeoReport_v2/#get-service-request) で定義したすべてのプロパティを包含する。このデータモデルとFIWARE NGSIバージョン2の実装を使用すると、Open 311の仕様に準拠したサービスを簡単に実装することができます。  
+ServiceRequest` 型のエンティティは、受け入れられる Open 311 サービスリクエストである。このようなエンティティは、[POST Service Request](http://wiki.open311.org/GeoReport_v2/#post-service-request)と[GET Service Request](http://wiki.open311.org/GeoReport_v2/#get-service-request)でOpen 311によって定義されたすべてのプロパティを包含する。このデータモデルとFIWARE NGSIバージョン2の実装を使用すれば、Open 311仕様に準拠したサービスを実装するのは簡単です。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
@@ -36,35 +43,57 @@ service_requests:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
           type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
         streetNr:    
-          description: Number identifying a specific property on a public street.    
+          description: Number identifying a specific property on a public street    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     agency_responsible:    
-      description: 'Property. Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org. Model:''http://schema.org/provider'''    
+      description: Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org    
       type: string    
       x-ngsi:    
         model: http://schema.org/provider    
@@ -81,18 +110,18 @@ service_requests:
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -104,56 +133,64 @@ service_requests:
         type: Property    
     device_id:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Relationship. The unique device ID of the device submitting the request. This is usually only used for mobile devices. Model:''https://schema.org/URL'''    
+          x-ngsi:    
+            type: Property    
+      description: The unique device ID of the device submitting the request. This is usually only used for mobile devices    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     email:    
-      description: Email address of owner.    
+      description: Email address of owner    
       format: idn-email    
       type: string    
       x-ngsi:    
         type: Property    
     expected_datetime:    
-      description: 'Property. The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement. Model:''https://schema.org/DateTime'''    
+      description: The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
     first_name:    
-      description: 'Given name. In the U.S., the first name of a Person.'    
+      description: 'Given name. In the U.S., the first name of a Person'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     id:    
-      anyOf: &service_requests_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     jurisdiction_id:    
-      description: Property. The unique ID of the legal entity of the service (i.e. city).    
+      description: The unique ID of the legal entity of the service (i.e. city)    
       type: string    
       x-ngsi:    
         type: Property    
     last_name:    
-      description: 'Family name. In the U.S., the last name of a Person.'    
+      description: 'Family name. In the U.S., the last name of a Person'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -161,7 +198,7 @@ service_requests:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: GeoProperty. Geojson reference to the item. Point    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -182,7 +219,9 @@ service_requests:
             - coordinates    
           title: GeoJSON Point    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. LineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -206,7 +245,9 @@ service_requests:
             - coordinates    
           title: GeoJSON LineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. Polygon    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -232,7 +273,9 @@ service_requests:
             - coordinates    
           title: GeoJSON Polygon    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiPoint    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -255,7 +298,9 @@ service_requests:
             - coordinates    
           title: GeoJSON MultiPoint    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -281,7 +326,9 @@ service_requests:
             - coordinates    
           title: GeoJSON MultiLineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -309,35 +356,51 @@ service_requests:
             - coordinates    
           title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     media_url:    
-      description: 'Property. A URL to media associated with the request, eg an image. Model:''https://schema.org/URL'''    
+      description: 'A URL to media associated with the request, eg an image'    
       type: string    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *service_requests_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     phone:    
-      description: The telephone number.    
+      description: The telephone number    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     requested_datetime:    
-      description: 'Property. The date and time when the service request was made. Model:''https://schema.org/DateTime'''    
+      description: The date and time when the service request was made    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
@@ -355,32 +418,32 @@ service_requests:
       x-ngsi:    
         type: Property    
     service_code:    
-      description: Property. The unique identifier for the service request type.    
+      description: The unique identifier for the service request type    
       type: string    
       x-ngsi:    
         type: Property    
     service_name:    
-      description: Property. The human readable name of the service request type.    
+      description: The human readable name of the service request type    
       type: string    
       x-ngsi:    
         type: Property    
     service_notice:    
-      description: Property. Information about the action expected to fulfill the request or otherwise address the information reported.    
+      description: Information about the action expected to fulfill the request or otherwise address the information reported    
       type: string    
       x-ngsi:    
         type: Property    
     service_request_id:    
-      description: Property. The unique ID of the service request created.    
+      description: The unique ID of the service request created    
       type: string    
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     status:    
-      description: 'Property. Allows one to search for requests which have a specific status. This defaults to all statuses; can be declared multiple times, comma delimited. Enum:''open, closed'''    
+      description: 'Allows one to search for requests which have a specific status. This defaults to all statuses; can be declared multiple times, comma delimited. Enum:''open, closed'''    
       enum:    
         - closed    
         - open    
@@ -388,19 +451,19 @@ service_requests:
       x-ngsi:    
         type: Property    
     status_notes:    
-      description: Property. Explanation of why status was changed to current state or more details on current status than conveyed with status alone.    
+      description: Explanation of why status was changed to current state or more details on current status than conveyed with status alone    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'Property. NGSI Entity type. It has to be service_requests. Enum:''service_requests'''    
+      description: 'NGSI Entity type. It has to be service_requests. Enum:''service_requests'''    
       enum:    
         - service_requests    
       type: string    
       x-ngsi:    
         type: Property    
     updated_datetime:    
-      description: 'Property. The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed. Model:''https://schema.org/DateTime'''    
+      description: 'The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed'    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
@@ -422,8 +485,8 @@ service_requests:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### service_requests NGSI-v2 key-value 例．  
-ここでは、service_requestsをJSON-LD形式でkey-valuesとした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### service_requests NGSI-v2 キー値の例  
+以下は、JSON-LD形式のservice_requestsをkey-valuesとした例である。これはNGSI-v2と互換性があり、`options=keyValues`を使用すると個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -463,7 +526,7 @@ service_requests:
 ```  
 </details>  
 #### service_requests NGSI-v2 正規化例  
-以下は、正規化されたJSON-LD形式のservice_requestsの例である。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化されたJSON-LD形式のservice_requestsの例である。これはNGSI-v2と互換性があり、オプションを使用しない場合、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -544,8 +607,8 @@ service_requests:
 }  
 ```  
 </details>  
-#### service_requests NGSI-LD キー値例  
-ここでは、service_requestsをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### service_requests NGSI-LD キー値の例  
+以下は、JSON-LD形式のservice_requestsをkey-valuesとした例である。これはNGSI-LDと互換性があり、`options=keyValues`を使うと個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -589,7 +652,7 @@ service_requests:
 ```  
 </details>  
 #### service_requests NGSI-LD 正規化例  
-ここでは、正規化されたJSON-LD形式のservice_requestsの例を示します。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化されたJSON-LD形式のservice_requestsの例である。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -686,7 +749,7 @@ service_requests:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
