@@ -1,119 +1,173 @@
-Entità: IssueReporting  
-======================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: IssueReporting  
+======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.IssueTracking/blob/master/IssueReporting/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Un modello di dati per i problemi dei cittadini, le segnalazioni e i feedback.  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **Un modello di dati per i problemi, le segnalazioni e i feedback dei cittadini.**  
+versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `category`: Il nome della categoria corrispondente al problema che è stato segnalato.  - `categoryCode`: Identificatore unico per la categoria corrispondente al problema segnalato.  - `comments`: Commenti degli utenti corrispondenti a questa osservazione.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `departmentId`: ID o codice unico associato al dipartimento che è associato al servizio o alla questione corrispondente a questa osservazione.  - `description`: Una descrizione di questo articolo  - `id`: Identificatore unico dell'entità  - `landmark`: Un elemento fisico distintivo sulla terra che segna una località o un luogo.  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mediaURL`: URL che fornisce ulteriori informazioni di qualsiasi immagine(i) o media della denuncia o del luogo.  - `name`: Il nome di questo articolo.  - `observationDateTime`: Ultima ora di osservazione riportata.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `reportId`: ID unico assegnato per il problema o la relazione o il feedback o la transazione corrispondente a questa osservazione.  - `resolutionStatus`: Stato del problema che è stato segnalato in termini di risoluzione o delle azioni intraprese su di esso. Potrebbe essere Open, Assigned, InProgress, Unassigned, Closed  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `subCategory`: Il nome della sottocategoria corrispondente al problema che è stato segnalato.  - `subCategoryCode`: Identificatore unico per la sottocategoria corrispondente al problema segnalato.  - `title`: Il titolo assegnato alla questione, al rapporto o al feedback corrispondente a questa osservazione.  - `titleCode`: Il codice assegnato al titolo corrispondente a questa osservazione.  - `type`: Tipo di entità NGSI. Deve essere IssueReporting  - `wardId`: ID del reparto dell'entità corrispondente a questa osservazione.    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Il paese. Ad esempio, la Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La località in cui si trova l'indirizzo civico e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale.    
+	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: Il nome della categoria corrispondente al problema che è stato segnalato  . Model: [https://schema.org/Text](https://schema.org/Text)- `categoryCode[string]`: Identificatore univoco della categoria corrispondente al problema segnalato.  . Model: [https://schema.org/Text](https://schema.org/Text)- `comments[string]`: Commenti degli utenti corrispondenti a questa osservazione  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `departmentId[string]`: ID o codice univoco associato al servizio o al problema corrispondente a questa osservazione.  . Model: [https://schema.org/Text](https://schema.org/Text)- `description[string]`: Descrizione dell'articolo  - `id[*]`: Identificatore univoco dell'entità  - `landmark[string]`: Un elemento fisico distintivo sul terreno che segnala una località o un luogo.  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `mediaURL[uri]`: URL che fornisce ulteriori informazioni su eventuali immagini o supporti del reclamo o del luogo  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: Il nome di questo elemento  - `observationDateTime[date-time]`: Ultima ora di osservazione segnalata  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `reportId[string]`: ID univoco assegnato per il problema, la segnalazione, il feedback o la transazione corrispondente a questa osservazione.  . Model: [https://schema.org/Text](https://schema.org/Text)- `resolutionStatus[string]`: Stato del problema segnalato in termini di risoluzione o di azioni intraprese. Può essere Aperto, Assegnato, In corso, Non assegnato, Chiuso.  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `subCategory[string]`: Il nome della sottocategoria corrispondente al problema che è stato segnalato  . Model: [https://schema.org/Text](https://schema.org/Text)- `subCategoryCode[string]`: Identificatore univoco della sottocategoria corrispondente al problema segnalato.  . Model: [https://schema.org/Text](https://schema.org/Text)- `title[string]`: Il titolo assegnato al problema, al rapporto o al feedback corrispondente a questa osservazione.  . Model: [https://schema.org/Text](https://schema.org/Text)- `titleCode[string]`: Il codice assegnato al titolo corrispondente a questa osservazione  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo di entità NGSI. Deve essere IssueReporting (Segnalazione problemi)  - `wardId[string]`: ID del rione dell'entità corrispondente a questa osservazione  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `id`  - `type`    
-La segnalazione delle questioni è adattata dal sistema di segnalazione IUDX per l'oggetto dataModel.IssueTracking.  
-## Descrizione del modello di dati delle proprietà  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+La segnalazione dei problemi è adattata dal sistema di segnalazione IUDX per il Subject dataModel.IssueTracking.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 IssueReporting:    
   description: 'A Data Model for citizen issues, reports and feedbacks.'    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     category:    
-      description: 'The category name corresponding to the issue that has been reported.'    
+      description: The category name corresponding to the issue that has been reported    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     categoryCode:    
-      description: 'Unique identifier for the category corresponding to the issue reported.'    
+      description: Unique identifier for the category corresponding to the issue reported    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     comments:    
-      description: 'User comments corresponding to this observation.'    
+      description: User comments corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     departmentId:    
-      description: 'Unique ID or code associated with the department which is associated with the service or the issue corresponding to this observation.'    
+      description: Unique ID or code associated with the department which is associated with the service or the issue corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &issuereporting_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     landmark:    
-      description: 'A physical distinguishing feature on land that marks a locality or a place.'    
+      description: A physical distinguishing feature on land that marks a locality or a place    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -121,7 +175,7 @@ IssueReporting:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -140,9 +194,11 @@ IssueReporting:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -164,9 +220,11 @@ IssueReporting:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -190,9 +248,11 @@ IssueReporting:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -213,9 +273,11 @@ IssueReporting:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -239,9 +301,11 @@ IssueReporting:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -267,39 +331,55 @@ IssueReporting:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     mediaURL:    
-      description: 'URL providing further information of any image(s) or media of the complaint or place.'    
+      description: URL providing further information of any image(s) or media of the complaint or place    
       format: uri    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     observationDateTime:    
-      description: 'Last reported time of observation.'    
+      description: Last reported time of observation    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *issuereporting_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     reportId:    
-      description: 'Unique ID assigned for the issue or report or feedback or transaction corresponding to this observation.'    
+      description: Unique ID assigned for the issue or report or feedback or transaction corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -317,7 +397,7 @@ IssueReporting:
         model: https://schema.org/Text    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -329,43 +409,43 @@ IssueReporting:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     subCategory:    
-      description: 'The sub-category name corresponding to the issue that has been reported.'    
+      description: The sub-category name corresponding to the issue that has been reported    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     subCategoryCode:    
-      description: 'Unique identifier for the sub-category corresponding to the issue reported.'    
+      description: Unique identifier for the sub-category corresponding to the issue reported    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     title:    
-      description: 'The title assigned to the issue, report or feedback corresponding to this observation.'    
+      description: 'The title assigned to the issue, report or feedback corresponding to this observation'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     titleCode:    
-      description: 'The code assigned to the title corresponding to this observation.'    
+      description: The code assigned to the title corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI entity type. It has to be IssueReporting'    
+      description: NGSI entity type. It has to be IssueReporting    
       enum:    
         - IssueReporting    
       type: string    
       x-ngsi:    
         type: Property    
     wardId:    
-      description: 'Ward ID of the entity corresponding to this observation.'    
+      description: Ward ID of the entity corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -375,16 +455,21 @@ IssueReporting:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/IssueReporting/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.IssueTracking/IssueReporting/schema.json    
   x-model-tags: ""    
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### IssueReporting NGSI-v2 key-values Esempio  
-Ecco un esempio di un IssueReporting in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### ProblemaSegnalazione dei valori chiave NGSI-v2 Esempio  
+Ecco un esempio di IssueReporting in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:xYBR:0102",  
@@ -405,8 +490,10 @@ IssueReporting:
     "resolutionStatus": "Assigned"  
 }  
 ```  
+</details>  
 #### IssueReporting NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un IssueReporting in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di IssueReporting in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:xYBR:0102",  
@@ -469,81 +556,64 @@ IssueReporting:
   }  
 }  
 ```  
-#### IssueReporting NGSI-LD key-values Esempio  
-Ecco un esempio di un IssueReporting in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
-  "id": "urn:ngsi-ld:xYBR:0102",  
-  "type": "IssueReporting",  
-  "comments": "Road not in proper condition",  
-  "wardId": "4",  
-  "departmentId": "12",  
-  "title": "Road maintenance",  
-  "subCategoryCode": "RM",  
-  "titleCode": "RDM",  
-  "subCategory": "Road Repair",  
-  "reportId": "21645",  
-  "categoryCode": "112",  
-  "category": "Maintenance",  
-  "landmark": "Near St.Andrews Church",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30",  
-  "mediaURL": "https://imgur.com",  
-  "resolutionStatus": "Assigned",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:IssueReporting"  
-  ]  
-}  
-```  
-#### IssueReporting NGSI-LD normalizzato Esempio  
-Ecco un esempio di un IssueReporting in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### ProblemaSegnalazione dei valori chiave NGSI-LD Esempio  
+Ecco un esempio di IssueReporting in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:xYBR:0102",  
     "type": "IssueReporting",  
-    "comments": {  
+    "category": "Maintenance",  
+    "categoryCode": "112",  
+    "comments": "Road not in proper condition",  
+    "departmentId": "12",  
+    "landmark": "Near St.Andrews Church",  
+    "mediaURL": "https://imgur.com",  
+    "observationDateTime": "2021-03-11T15:51:02+05:30",  
+    "reportId": "21645",  
+    "resolutionStatus": "Assigned",  
+    "subCategory": "Road Repair",  
+    "subCategoryCode": "RM",  
+    "title": "Road maintenance",  
+    "titleCode": "RDM",  
+    "wardId": "4",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/context.jsonld"  
+    ]  
+}  
+```  
+</details>  
+#### Segnalazione di problemi NGSI-LD normalizzato Esempio  
+Ecco un esempio di IssueReporting in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:xYBR:0102",  
+    "type": "IssueReporting",  
+    "category": {  
         "type": "Property",  
-        "value": "Road not in proper condition"  
-    },  
-    "wardId": {  
-        "type": "Property",  
-        "value": "4"  
-    },  
-    "departmentId": {  
-        "type": "Property",  
-        "value": "12"  
-    },  
-    "title": {  
-        "type": "Property",  
-        "value": "Road maintenance"  
-    },  
-    "subCategoryCode": {  
-        "type": "Property",  
-        "value": "RM"  
-    },  
-    "titleCode": {  
-        "type": "Property",  
-        "value": "RDM"  
-    },  
-    "subCategory": {  
-        "type": "Property",  
-        "value": "Road Repair"  
-    },  
-    "reportId": {  
-        "type": "Property",  
-        "value": "21645"  
+        "value": "Maintenance"  
     },  
     "categoryCode": {  
         "type": "Property",  
         "value": "112"  
     },  
-    "category": {  
+    "comments": {  
         "type": "Property",  
-        "value": "Maintenance"  
+        "value": "Road not in proper condition"  
+    },  
+    "departmentId": {  
+        "type": "Property",  
+        "value": "12"  
     },  
     "landmark": {  
         "type": "Property",  
         "value": "Near St.Andrews Church"  
+    },  
+    "mediaURL": {  
+        "type": "Property",  
+        "value": "https://imgur.com"  
     },  
     "observationDateTime": {  
         "type": "Property",  
@@ -552,18 +622,45 @@ IssueReporting:
             "@value": "2021-03-11T15:51:02+05:30"  
         }  
     },  
-    "mediaURL": {  
+    "reportId": {  
         "type": "Property",  
-        "value": "https://imgur.com"  
+        "value": "21645"  
     },  
     "resolutionStatus": {  
         "type": "Property",  
         "value": "Assigned"  
     },  
+    "subCategory": {  
+        "type": "Property",  
+        "value": "Road Repair"  
+    },  
+    "subCategoryCode": {  
+        "type": "Property",  
+        "value": "RM"  
+    },  
+    "title": {  
+        "type": "Property",  
+        "value": "Road maintenance"  
+    },  
+    "titleCode": {  
+        "type": "Property",  
+        "value": "RDM"  
+    },  
+    "wardId": {  
+        "type": "Property",  
+        "value": "4"  
+    },  
     "@context": [  
-        "https://smartdatamodels.org/context.jsonld",   
-        "iudx:IssueReporting"  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/context.jsonld"  
     ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
