@@ -1,6 +1,6 @@
 {
   "id": "o311:servicetype-guadalajara-sidewalks",
-  "type": "Open311ServiceType",
+  "type": "services",
   "group": {
     "type": "Text",
     "value": "street"
