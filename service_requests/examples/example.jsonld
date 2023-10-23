@@ -1,6 +1,6 @@
 {
     "id": "service-request:638344",
-    "type": "Open311ServiceRequest",
+    "type": "service_requests",
     "address_string": "Calle San Juan Bautista, 2",
     "agency_responsible": "Ayuntamiento de Ciudad",
     "attributes": [
