@@ -1,6 +1,6 @@
 {
   "id": "service-request:638344",
-  "type": "Open311ServiceRequest",
+  "type": "service_requests",
   "status": {
     "type": "Text",
     "value": "closed"
