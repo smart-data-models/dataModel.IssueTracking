@@ -1,6 +1,6 @@
 {
     "id": "urn:ngsi-ld:Open311ServiceRequest:service-request:638344",
-    "type": "Open311ServiceRequest",
+    "type": "service_requests",
     "address_string": {
         "type": "Property",
         "value": "Calle San Juan Bautista, 2"
