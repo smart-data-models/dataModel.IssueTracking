@@ -50,7 +50,7 @@
     "value": "2021-03-11T15:51:02+05:30"
   },
   "mediaURL": {
-    "type": "URL",
+    "type": "Text",
     "value": "https://imgur.com"
   },
   "resolutionStatus": {
