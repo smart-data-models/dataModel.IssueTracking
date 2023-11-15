@@ -22,7 +22,7 @@
     "value": "realtime"
   },
   "jurisdiction_id": {
-    "type": "URL",
+    "type": "Text",
     "value": "www.smartguadalajara.com"
   },
   "dateCreated": {
