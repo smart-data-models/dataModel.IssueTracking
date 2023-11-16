@@ -1,21 +1,21 @@
 {
-    "id": "urn:ngsi-ld:xYBR:0102",
-    "type": "IssueReporting",
-    "category": "Maintenance",
-    "categoryCode": "112",
-    "comments": "Road not in proper condition",
-    "departmentId": "12",
-    "landmark": "Near St.Andrews Church",
-    "mediaURL": "https://imgur.com",
-    "observationDateTime": "2021-03-11T15:51:02+05:30",
-    "reportId": "21645",
-    "resolutionStatus": "Assigned",
-    "subCategory": "Road Repair",
-    "subCategoryCode": "RM",
-    "title": "Road maintenance",
-    "titleCode": "RDM",
-    "wardId": "4",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:xYBR:0102",
+  "type": "IssueReporting",
+  "category": "Maintenance",
+  "categoryCode": "112",
+  "comments": "Road not in proper condition",
+  "departmentId": "12",
+  "landmark": "Near St.Andrews Church",
+  "mediaURL": "https://imgur.com",
+  "observationDateTime": "2021-03-11T15:51:02+05:30",
+  "reportId": "21645",
+  "resolutionStatus": "Assigned",
+  "subCategory": "Road Repair",
+  "subCategoryCode": "RM",
+  "title": "Road maintenance",
+  "titleCode": "RDM",
+  "wardId": "4",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/context.jsonld"
+  ]
 }
