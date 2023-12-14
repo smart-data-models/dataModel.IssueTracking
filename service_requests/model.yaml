@@ -1,6 +1,24 @@
 service_requests:
   description: An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.
   properties:
+    account_id:
+      anyOf:
+        - description: Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
+          format: uri
+          type: string
+          x-ngsi:
+            type: Property
+      description: The unique ID for the user account of the person submitting the request
+      x-ngsi:
+        model: https://schema.org/URL
+        type: Relationship
     address:
       description: The mailing address
       properties:
@@ -54,6 +72,11 @@ service_requests:
       x-ngsi:
         model: https://schema.org/address
         type: Property
+    address_string:
+      description: 'Human entered address or description of location. This is required if no lat/long or address_id are provided. This should be written from most specific to most general geographic unit, eg address number or cross streets, street name, neighborhood/district, city/town/village, county, postal code'
+      type: string
+      x-ngsi:
+        type: Property
     agency_responsible:
       description: Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org
       type: string
@@ -70,6 +93,44 @@ service_requests:
       type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
+    attributes:
+      description: Variable attributes of the request response
+      items:
+        properties:
+          code:
+            type: string
+          datatype:
+            enum:
+              - string
+              - number
+              - datetime
+              - singlevaluelist
+              - multivaluelist
+            type: string
+          datatype_description:
+            type: string
+          description:
+            type: string
+          order:
+            minimum: 1
+            type: number
+          required:
+            type: boolean
+          values:
+            items:
+              properties:
+                key:
+                  type: number
+                name:
+                  type: string
+              type: object
+            type: array
+          variable:
+            type: boolean
+        type: object
+      type: array
+      x-ngsi:
         type: Property
     dataProvider:
       description: A sequence of characters identifying the provider of the harmonised data entity
@@ -435,7 +496,7 @@ service_requests:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.IssueTracking/blob/master/service_requests/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.IssueTracking/service_requests/schema.json
   x-model-tags: ""
