@@ -25,7 +25,6 @@
             }
         ]
     },
-    "createdAt": "2007-01-01T12:00:00Z",
     "description": {
         "type": "Property",
         "value": "When a sidewalk is broken or dirty allows citizens to request a fix"
