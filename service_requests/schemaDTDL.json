@@ -7,12 +7,25 @@
     "displayName": "service_requests",
     "contents": [
         {
+            "name": "account_id",
+            "writable": true,
+            "displayName": "account_id"
+        },
+        {
+            "name": "address_string",
+            "writable": true,
+            "displayName": "address_string",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Human entered address or description of location. This is required if no lat/long or address_id are provided. This should be written from most specific to most general geographic unit, eg address number or cross streets, street name, neighborhood/district, city/town/village, county, postal code"
+        },
+        {
             "name": "agency_responsible",
             "writable": true,
             "displayName": "agency_responsible",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org. Model:'http://schema.org/provider'"
+            "comment": "Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org"
         },
         {
             "name": "alternateName",
@@ -36,7 +49,7 @@
             "displayName": "dataProvider",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
         },
         {
             "name": "dateCreated",
@@ -44,7 +57,7 @@
             "displayName": "dateCreated",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
         },
         {
             "name": "dateModified",
@@ -52,7 +65,7 @@
             "displayName": "dateModified",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
         },
         {
             "name": "description",
@@ -73,7 +86,7 @@
             "displayName": "email",
             "@type": "Property",
             "schema": "string",
-            "comment": "Email address of owner."
+            "comment": "Email address of owner"
         },
         {
             "name": "expected_datetime",
@@ -81,7 +94,7 @@
             "displayName": "expected_datetime",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement. Model:'https://schema.org/DateTime'"
+            "comment": "The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement"
         },
         {
             "name": "first_name",
@@ -89,7 +102,7 @@
             "displayName": "first_name",
             "@type": "Property",
             "schema": "string",
-            "comment": "Given name. In the U.S., the first name of a Person."
+            "comment": "Given name. In the U.S., the first name of a Person"
         },
         {
             "name": "jurisdiction_id",
@@ -97,7 +110,7 @@
             "displayName": "jurisdiction_id",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. The unique ID of the legal entity of the service (i.e. city)."
+            "comment": "The unique ID of the legal entity of the service (i.e. city)"
         },
         {
             "name": "last_name",
@@ -105,7 +118,7 @@
             "displayName": "last_name",
             "@type": "Property",
             "schema": "string",
-            "comment": "Family name. In the U.S., the last name of a Person."
+            "comment": "Family name. In the U.S., the last name of a Person"
         },
         {
             "name": "location",
@@ -118,7 +131,7 @@
             "displayName": "media_url",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. A URL to media associated with the request, eg an image. Model:'https://schema.org/URL'"
+            "comment": "A URL to media associated with the request, eg an image"
         },
         {
             "name": "name",
@@ -126,7 +139,7 @@
             "displayName": "name",
             "@type": "Property",
             "schema": "string",
-            "comment": "The name of this item."
+            "comment": "The name of this item"
         },
         {
             "name": "phone",
@@ -134,7 +147,7 @@
             "displayName": "phone",
             "@type": "Property",
             "schema": "string",
-            "comment": "The telephone number."
+            "comment": "The telephone number"
         },
         {
             "name": "requested_datetime",
@@ -142,7 +155,7 @@
             "displayName": "requested_datetime",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. The date and time when the service request was made. Model:'https://schema.org/DateTime'"
+            "comment": "The date and time when the service request was made"
         },
         {
             "name": "seeAlso",
@@ -155,7 +168,7 @@
             "displayName": "service_code",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. The unique identifier for the service request type."
+            "comment": "The unique identifier for the service request type"
         },
         {
             "name": "service_name",
@@ -163,7 +176,7 @@
             "displayName": "service_name",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. The human readable name of the service request type."
+            "comment": "The human readable name of the service request type"
         },
         {
             "name": "service_notice",
@@ -171,7 +184,7 @@
             "displayName": "service_notice",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. Information about the action expected to fulfill the request or otherwise address the information reported."
+            "comment": "Information about the action expected to fulfill the request or otherwise address the information reported"
         },
         {
             "name": "service_request_id",
@@ -179,7 +192,7 @@
             "displayName": "service_request_id",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. The unique ID of the service request created."
+            "comment": "The unique ID of the service request created"
         },
         {
             "name": "source",
@@ -187,7 +200,7 @@
             "displayName": "source",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
         },
         {
             "name": "status_notes",
@@ -195,7 +208,7 @@
             "displayName": "status_notes",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. Explanation of why status was changed to current state or more details on current status than conveyed with status alone."
+            "comment": "Explanation of why status was changed to current state or more details on current status than conveyed with status alone"
         },
         {
             "name": "updated_datetime",
@@ -203,7 +216,17 @@
             "displayName": "updated_datetime",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed. Model:'https://schema.org/DateTime'"
+            "comment": "The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "attributes",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Variable attributes of the request response",
+            "displayName": "attributes"
         },
         {
             "@type": "Telemetry",
