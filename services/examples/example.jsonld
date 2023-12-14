@@ -22,7 +22,6 @@
       "variable": true
     }
   ],
-  "createdAt": "2007-01-01T12:00:00Z",
   "description": "When a sidewalk is broken or dirty allows citizens to request a fix",
   "group": "street",
   "jurisdiction_id": "www.smartguadalajara.com",
