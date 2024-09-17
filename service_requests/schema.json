@@ -1,10 +1,10 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.3.4",
-  "modelTags": "IUDX",
-  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
-  "title": "Weather Observed schema - Smart Data Models",
-  "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.1.0",
+  "modelTags": "",
+  "$id": "https://smart-data-models.github.io/dataModel.IssueTracking/service_requests/schema.json",
+  "title": "FIWARE - Open311 Service Requests",
+  "description": "An entity of type ServiceRequest is an acceptable Open 311 service request. Such entity encompasses all the properties defined by Open 311 at POST Service Request and GET Service Request.",
   "type": "object",
   "allOf": [
     {
@@ -14,61 +14,79 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
-    },
-    {
       "properties": {
         "type": {
           "type": "string",
           "enum": [
-            "WeatherObserved"
+            "service_requests"
           ],
-          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
+          "description": "Property. NGSI Entity type. It has to be service_requests. Enum:'service_requests'"
         },
-        "dateObserved": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
+        "service_request_id": {
+          "type": "string",
+          "description": "Property. The unique ID of the service request created"
         },
-        "precipitation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
+        "jurisdiction_id": {
+          "type": "string",
+          "description": "Property. The unique ID of the legal entity of the service (i.e. city)"
         },
-        "solarRadiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
+        "service_code": {
+          "type": "string",
+          "description": "Property. The unique identifier for the service request type"
         },
-        "directIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
+        "service_name": {
+          "type": "string",
+          "description": "Property. The human readable name of the service request type"
         },
-        "diffuseIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
+        "agency_responsible": {
+          "type": "string",
+          "description": "Property. Please note that this is semantically equivalent to the provider property (name subproperty) of schema.org. Model:'http://schema.org/provider'"
         },
-        "pressureTendency": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "falling",
-                "raising",
-                "steady"
-              ]
-            },
-            {
-              "type": "number"
-            }
-          ],
-          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms"
+        "service_notice": {
+          "type": "string",
+          "description": "Property. Information about the action expected to fulfill the request or otherwise address the information reported"
         },
-        "dewPoint": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor"
+        "status": {
+          "type": "string",
+          "description": "Property. Allows one to search for requests which have a specific status. This defaults to all statuses; can be declared multiple times, comma delimited. Enum:'open, closed'",
+          "enum": [
+            "closed",
+            "open"
+          ]
         },
-        "refDevice": {
+        "status_notes": {
+          "type": "string",
+          "description": "Property. Explanation of why status was changed to current state or more details on current status than conveyed with status alone"
+        },
+        "requested_datetime": {
+          "type": "string",
+          "description": "Property. The date and time when the service request was made. Model:'https://schema.org/DateTime'"
+        },
+        "updated_datetime": {
+          "type": "string",
+          "description": "Property. The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed. Model:'https://schema.org/DateTime'"
+        },
+        "expected_datetime": {
+          "type": "string",
+          "description": "Property. The date and time when the service request can be expected to be fulfilled. This may be based on a service-specific service level agreement. Model:'https://schema.org/DateTime'"
+        },
+        "media_url": {
+          "type": "string",
+          "description": "Property. A URL to media associated with the request, eg an image. Model:'https://schema.org/URL'"
+        },
+        "email": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/email"
+        },
+        "first_name": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/person/properties/givenName"
+        },
+        "last_name": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/person/properties/familyName"
+        },
+        "phone": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Person-Commons/properties/person/properties/telephone"
+        },
+        "device_id": {
           "anyOf": [
             {
               "type": "string",
@@ -83,63 +101,86 @@
               "description": "Property. Identifier format of any NGSI entity"
             }
           ],
-          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation"
+          "description": "Relationship. The unique device ID of the device submitting the request. This is usually only used for mobile devices. Model:'https://schema.org/URL'"
         },
-        "streamGauge": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
+        "account_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. The unique ID for the user account of the person submitting the request. Model:'https://schema.org/URL'"
         },
-        "snowHeight": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
-        },
-        "uVIndexMax": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored"
-        },
-        "aqiMajorPollutant": {
+        "address_string": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Major pollutant in the Air Quality Index (AQI)"
+          "description": "Property. Human entered address or description of location. This is required if no lat/long or address_id are provided. This should be written from most specific to most general geographic unit, eg address number or cross streets, street name, neighborhood/district, city/town/village, county, postal code"
         },
-        "aqiMajorPollutantForecast": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future"
-        },
-        "airTemperatureForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted value of air temperature over a certain duration in future"
-        },
-        "precipitationForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted rainfall over a certain duration in future"
-        },
-        "airQualityIndex": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Air quality index is a number used to report the quality of the air on any given day"
-        },
-        "relativeHumidityForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
-        },
-        "airQualityIndexForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future"
-        },
-        "airTemperatureTSA": {
-          "type": "object",
-          "description": "Property. Air temperature time series aggregation",
-          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
+        "attributes": {
+          "type": "array",
+          "description": "Property. Variable attributes of the request response",
+          "items": {
+            "type": "object",
+            "properties": {
+              "variable": {
+                "type": "boolean"
+              },
+              "code": {
+                "type": "string"
+              },
+              "datatype": {
+                "type": "string",
+                "enum": [
+                  "string",
+                  "number",
+                  "datetime",
+                  "singlevaluelist",
+                  "multivaluelist"
+                ]
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "datatype_description": {
+                "type": "string"
+              },
+              "order": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "description": {
+                "type": "string"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
   ],
   "required": [
     "id",
-    "type",
-    "dateObserved",
-    "location"
+    "type"
   ]
 }
