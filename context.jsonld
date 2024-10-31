@@ -1,29 +1,34 @@
 {
     "@context": {
         "IssueReporting": "https://smartdatamodels.org/dataModel.IssueTracking/IssueReporting",
+        "account_id": "https://smartdatamodels.org/dataModel.IssueTracking/account_id",
         "address": "https://smartdatamodels.org/address",
         "addressCountry": "https://smartdatamodels.org/addressCountry",
         "addressLocality": "https://smartdatamodels.org/addressLocality",
         "addressRegion": "https://smartdatamodels.org/addressRegion",
+        "address_string": "https://smartdatamodels.org/dataModel.IssueTracking/address_string",
         "agency_responsible": "https://smartdatamodels.org/dataModel.IssueTracking/agency_responsible",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
         "attributes": {
-            "@id": "ngsi-ld:attributes",
+            "@id": "https://uri.etsi.org/ngsi-ld/attributes",
             "@type": "@vocab"
         },
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "category": "https://smartdatamodels.org/dataModel.IssueTracking/category",
         "categoryCode": "https://smartdatamodels.org/dataModel.IssueTracking/categoryCode",
+        "code": "https://smartdatamodels.org/dataModel.IssueTracking/code",
         "comments": "https://smartdatamodels.org/dataModel.IssueTracking/comments",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
+        "datatype": "https://smartdatamodels.org/dataModel.IssueTracking/datatype",
+        "datatype_description": "https://smartdatamodels.org/dataModel.IssueTracking/datatype_description",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
         "dateModified": "https://smartdatamodels.org/dateModified",
         "departmentId": "https://smartdatamodels.org/dataModel.IssueTracking/departmentId",
@@ -37,10 +42,11 @@
         "group": "https://smartdatamodels.org/dataModel.IssueTracking/group",
         "id": "@id",
         "jurisdiction_id": "https://smartdatamodels.org/dataModel.IssueTracking/jurisdiction_id",
+        "key": "https://uri.etsi.org/ngsi-ld/hasKey",
         "keywords": "https://smartdatamodels.org/dataModel.IssueTracking/keywords",
         "landmark": "https://smartdatamodels.org/dataModel.IssueTracking/landmark",
         "last_name": "https://smartdatamodels.org/dataModel.IssueTracking/last_name",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "mediaURL": "https://smartdatamodels.org/dataModel.IssueTracking/mediaURL",
         "media_url": "https://smartdatamodels.org/dataModel.IssueTracking/media_url",
         "name": "https://smartdatamodels.org/name",
@@ -48,6 +54,7 @@
         "observationDateTime": "https://smartdatamodels.org/dataModel.IssueTracking/observationDateTime",
         "open311:metadata": "https://smartdatamodels.org/dataModel.IssueTracking/open311:metadata",
         "open311:type": "https://smartdatamodels.org/dataModel.IssueTracking/open311:type",
+        "order": "https://smartdatamodels.org/dataModel.IssueTracking/order",
         "owner": "https://smartdatamodels.org/owner",
         "phone": "https://smartdatamodels.org/dataModel.IssueTracking/phone",
         "postOfficeBoxNumber": "https://smartdatamodels.org/postOfficeBoxNumber",
@@ -55,6 +62,7 @@
         "provider": "https://smartdatamodels.org/dataModel.IssueTracking/provider",
         "reportId": "https://smartdatamodels.org/dataModel.IssueTracking/reportId",
         "requested_datetime": "https://smartdatamodels.org/dataModel.IssueTracking/requested_datetime",
+        "required": "https://smartdatamodels.org/dataModel.IssueTracking/required",
         "resolutionStatus": "https://smartdatamodels.org/dataModel.IssueTracking/resolutionStatus",
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "service_code": "https://smartdatamodels.org/dataModel.IssueTracking/service_code",
@@ -64,7 +72,7 @@
         "service_requests": "https://smartdatamodels.org/dataModel.IssueTracking/service_requests",
         "services": "https://smartdatamodels.org/dataModel.IssueTracking/services",
         "source": "https://smartdatamodels.org/source",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "status_notes": "https://smartdatamodels.org/dataModel.IssueTracking/status_notes",
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
@@ -74,6 +82,11 @@
         "titleCode": "https://smartdatamodels.org/dataModel.IssueTracking/titleCode",
         "type": "@type",
         "updated_datetime": "https://smartdatamodels.org/dataModel.IssueTracking/updated_datetime",
+        "values": {
+            "@container": "@list",
+            "@id": "https://uri.etsi.org/ngsi-ld/hasValues"
+        },
+        "variable": "https://smartdatamodels.org/dataModel.IssueTracking/variable",
         "wardId": "https://smartdatamodels.org/dataModel.IssueTracking/wardId"
     }
 }
