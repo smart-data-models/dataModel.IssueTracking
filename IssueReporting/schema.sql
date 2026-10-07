@@ -1,5 +1,5 @@
 /* (Beta) Export of data model IssueReporting of the subject dataModel.IssueTracking for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE resolutionStatus_type AS ENUM ('Assigned', 'Closed.', 'InProgress', 'Open', 'Unassigned');
+CREATE TYPE IssueReporting_resolutionStatus_type AS ENUM ('Assigned', 'Closed.', 'InProgress', 'Open', 'Unassigned');
 CREATE TYPE IssueReporting_type AS ENUM ('IssueReporting');
 CREATE TABLE IssueReporting (
   "address" JSON,
@@ -21,7 +21,7 @@ CREATE TABLE IssueReporting (
   "observationDateTime" TIMESTAMP,
   "owner" JSON,
   "reportId" TEXT,
-  "resolutionStatus" resolutionStatus_type,
+  "resolutionStatus" IssueReporting_resolutionStatus_type,
   "seeAlso" JSON,
   "source" TEXT,
   "subCategory" TEXT,
