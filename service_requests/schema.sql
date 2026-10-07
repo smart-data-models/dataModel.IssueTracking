@@ -1,5 +1,5 @@
 /* (Beta) Export of data model service_requests of the subject dataModel.IssueTracking for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE status_type AS ENUM ('closed', 'open');
+CREATE TYPE service_requests_status_type AS ENUM ('closed', 'open');
 CREATE TYPE service_requests_type AS ENUM ('service_requests');
 CREATE TABLE service_requests (
   "account_id" JSON,
@@ -32,7 +32,7 @@ CREATE TABLE service_requests (
   "service_notice" TEXT,
   "service_request_id" TEXT,
   "source" TEXT,
-  "status" status_type,
+  "status" service_requests_status_type,
   "status_notes" TEXT,
   "type" service_requests_type,
   "updated_datetime" TEXT
